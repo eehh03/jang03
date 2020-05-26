@@ -76,41 +76,44 @@ line-height:1.5;
 					<li><a href="/weare">WE ARE</a></li>
 					<li><a href="/work">WORK</a></li>
 					<li><a href="/blog">BLOG</a></li>
-					<li><a href="contactus">CONTACT US</a></li>
+					<li><a href="/contactus">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
 			</span>
 		</header>
 		<section class="content">
-
-			<section class="display-section">
+		<section class="display-section">
 				<div class="container">
 					<h2 class="sec-tit">WE ARE</h2>
 					<p class="desc">
 						"휴먼 교육센터 디지털 컨버전스 과정 입니다." <br> "그리고, 지금은 화면 설계 시간 입니다."
 					</p>
 				</div>
-			</section>
+		</section>
 
-			<section class="promotion-section">
+		<section class="promotion-section">
 				<div class="container">
 					<ul class="promo-list">
+					
 						<li><a href="#"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
+					
 						<li><a href="#"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>WE ARE</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다2.</p>
 						</a></li>
+					
 						<li><a href="#"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>WORK</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다3.</p>
 						</a></li>
+					
 						<li><a href="#"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>BLOG</h3>
@@ -119,8 +122,8 @@ line-height:1.5;
 					</ul>
 				</div>
 			</section>
-
 		</section>
+		
 		<footer class="footer">
 			<p class="copyright">LOGO</p>
 		</footer>

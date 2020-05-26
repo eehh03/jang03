@@ -17,6 +17,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
+/** contact us 페이지 파일 입니다.	페이지 만들때 기본.*/
+@RequestMapping(value = "/contactus", method = RequestMethod.GET)
+public String contactus(Locale locale, Model model) {
+	return "contactus";
+}
+
+/** blog 페이지 파일 입니다.	페이지 만들때 기본.*/
+@RequestMapping(value = "/blog", method = RequestMethod.GET)
+public String blog(Locale locale, Model model) {
+	return "blog";
+}
+
 /** work 페이지 파일 입니다.	페이지 만들때 기본.*/
 @RequestMapping(value = "/work", method = RequestMethod.GET)
 public String work(Locale locale, Model model) {
@@ -29,6 +41,7 @@ public String work(Locale locale, Model model) {
 		return "weare";
 	}
 	
+
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */

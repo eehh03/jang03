@@ -32,7 +32,7 @@ width:100%;
 }
 .work-section .work-list li a{
 display:block;
-position:realtive;
+position:relative;
 width:100%;
 height:100%;
 }
@@ -45,21 +45,41 @@ z-index:10; /*그림에 마우스 올릴때 뭐나오는게 2개화면 곁쳐서
 width:100%;
 height:100%;
 background:#3f51b5;
-content:"";
-opacity:0;
-transition:all 0.2s;
+content:"";/*뭐나오기전에는 그냥둔다*/
+opacity:0;/*투명도*/
+transition:all 0.2s;/*움직임이 0.2초*/
 }/*그림위에다가 출력시키려는데*/
-.work-section .work-list li a:hover:before{
-opacity:0.86;
+.work-section .work-list li a:hover:before{/*hober뭔가떠있다*/
+opacity:0.86;/*100프로가 1임*/
 }
 .work-section .work-list li .info{
 position:absolute;
 top:0;
-lieft:23px;
+left:23px;
 z-index:20;
 opacity:0;
-transition:all 0.3s;}
-
+transition:all 0.3s;
+}/*사진위에 써있던게 사진으로 마우스가 가면 뜨게됨.*/
+.work-section .work-list li a:hover .info{
+transform:translateY(23px);
+opacity:1;
+}
+.work-section .work-list li .info h3{
+margin-bottom:8px;
+font-size:23px;
+color:#fff;
+font-weight:normal;/*normal로 해서 두꺼운거에서 일반두께로*/
+}/*작업1~8이 흰색으로 바뀌고 폰트가 커짐.*/
+.work-section .work-list li .info span{
+font-size:11px;
+color:#fff;/*color:white*/
+}/*소스/작업1~8이 흰색으로 바뀌고 폰트가 11로*/
+.work-section .work-list li img{/*모든 이미지*/
+display:block;
+width:100%;/*현재 모바일 기준이라서 이미지가100프로. 반응형으로 나타남*/
+max-width:100%;
+height:auto;/*화면안깨지게 auto로*/
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -70,7 +90,6 @@ transition:all 0.3s;}
 </script>
 </head>
 <body>
-
 <!-- 더미 데이터:CSS작업전 내용 -->
 	<div id="wrap">
 		<header class="header cfixed">
@@ -83,7 +102,7 @@ transition:all 0.3s;}
 					<li><a href="/weare">WE ARE</a></li>
 					<li><a href="/work">WORK</a></li>
 					<li><a href="/blog">BLOG</a></li>
-					<li><a href="contactus">CONTACT US</a></li>
+					<li><a href="/contactus">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
