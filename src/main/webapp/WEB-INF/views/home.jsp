@@ -5,80 +5,35 @@
 <!DOCTYPE HTML>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="viewport"
-	content="width=device-width, initial-scale=1, minimim-scale=1, maximum-scale=1, user-scalable=no">
-<title>1. 반응형 웹구조 준비하기</title>
-<!--  css작업 후 외부파일에 저장할 위치 -->
-<link rel="stylesheet" type="text/css" href="/css/reset.css">
-<!-- 참고: 파이콘(Favorite Icon)즐겨찾기 아이콘으로 등록 http://est0que.tistory.com/1539 -->
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scaleable=no">
+<title>HOME</title>
 <link rel="shortcut icon" href="/images/favicon/favicon.ico">
-<link rel="apple-touch-icon-proecomposed"
+<link rel="apple-touch-icon-precomposed"
 	href="/images/favicon/home-touch-icon.png">
-<!-- js작업후 외부파일에 저장할 위치 -->
-<script src="/js/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
+<link rel="stylesheet" type="text/css" href="/resources/css/common.css">
+
 <style>
-/* 모바일용 CSS */
-/* 기본 CSS */
-.container {
-	width: 90%;
-	max-width: 1132px;
-	margin: 0 auto;
-}
-
-.cfixed:after, .container:after {
-	display: block;
-	content: "";
-	clear: both;
-}
-
-.blind {
-	position: absolute;
-	width: 0;
-	height: 0;
-	line-height: 0;
-	text-indent: -9999px;
-	overflow: hidden;
-}
-
--sec-tit {
-	font-size: 42px;
-	color: #3f51b5;
-	font-weight: normal;
-}
-
-.divider {
-	width: 90%;
-	max-width: 1132px;
-	margin: 0 auto;
-	margin-top: 77px;
-	background: #eee;
-}
-
-.m-divier {
-	width: 20px;
-	margin: 0 auto;
-	margin-top: 77px;
-	background: #3f51b5;
-}
-
-/*태블릿용 CSS*/
-@media all and (min-width:768px) {
-	/*기본 CSS*/
-	.divider {
-		margin-top: 124px;
-	}
-	.m-divider {
-		margin-top: 124px;
-	}
-}
-
-/*PC용 CSS*/
-@media all and (min-width:1132px) {
+/* HOME 슬라이더 영역 CSS */
+.slider img {
+display:block;
+width:100%;
+max-width:100%;
+height:auto;
 }
 </style>
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/resources/js/common.js"></script>
+<!-- 사용자 스크립트 -->
+<script>
+
+</script>
 </head>
 <body>
+<!-- 더미 데이터:CSS작업전 내용 -->
 	<div id="wrap">
 		<header class="header cfixed">
 			<h1 class="logo">
@@ -86,22 +41,22 @@
 			</h1>
 			<nav>
 				<ul class="gnb">
-					<li><a href="">HOME</a></li>
-					<li><a href="">WE ARE</a></li>
-					<li><a href="">WORK</a></li>
-					<li><a href="">BLOG</a></li>
-					<li><a href="">CONTACK US</a></li>
+					<li><a href="/">HOME</a></li>
+					<li><a href="/weare">WE ARE</a></li>
+					<li><a href="/work">WORK</a></li>
+					<li><a href="/blog">BLOG</a></li>
+					<li><a href="contactus">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
 			</span>
 		</header>
 		<article class="slider">
-			<img src="/images/slide1.jpg" alt="">
+			<img src="/resources/images/sea.jpg" alt="">
 		</article>
+		<footer class="footer">
+			<p class="copyright">LOGO</p>
+		</footer>
 	</div>
-	<footer class="footer">
-		<p class="copyright">LOGO</p>
-	</footer>
 </body>
 </html>

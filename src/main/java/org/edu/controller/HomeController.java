@@ -16,19 +16,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
-/**
- * html5 테스트용 파일 입니다.	페이지 만들때 기본.
- * @param locale
- * @param model
- * @return
- */
-	@RequestMapping(value = "/HTMLtest", method = RequestMethod.GET)
-	public String HTMLtest(Locale locale, Model model) {
-		return "HTMLtest";
+
+/** work 페이지 파일 입니다.	페이지 만들때 기본.*/
+@RequestMapping(value = "/work", method = RequestMethod.GET)
+public String work(Locale locale, Model model) {
+	return "work";
+}
+
+/** we are 페이지 파일 입니다.	페이지 만들때 기본.*/
+	@RequestMapping(value = "/weare", method = RequestMethod.GET)
+	public String weare(Locale locale, Model model) {
+		return "weare";
 	}
-
-
+	
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
