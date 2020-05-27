@@ -54,6 +54,33 @@ font-family:"궁서"; /*한글은 "" 영어는 ''*/
 color:#616161;
 line-height:1.5;
 } 
+/*태블릿용 CSS. 반응형이면 기본적으로 필요함.*/
+@media all and (min-width:768px){
+/*태블릭 we are영역 css*/
+.display-section{
+margin-top:95px;
+}
+}
+/*태블릿 we are내용 영역css*/
+/*큰 타이틀 아래 영역*/
+.promotion-section .promo-list li{
+float:left;
+/*모바일은 세로로 나여랬으나 세로로 나열된 컨텐츠를가로로 배치하는 그래서 left쓰는*/
+width:23.046875%;
+/* 177px ÷ 768px
+그림4개를 177으로 잡고 4개로 나눠서 %로 나온것*/
+margin-left::2.604166666666667%;
+  /* 20px ÷ 768px*/
+  margin-top:0;
+}
+ /* [가변그리드공식] = 결과는 % 단위 입니다.
+  [가변element값 %] = (가변크기로 만들 박스의 가로 너비 / 가변그키로 만들 박스를 감싸고 있는 박스의 가로 너비) X 100 
+  [가변마진값 %] = (가변 마진을 적용할 마진값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
+  [가변패딩값 %] = (가변 패딩을 적용할 패딩값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
+  */
+.promotion-section .promo-list li:first-child{
+margin-left:0;/*첫번째(first~)는 left가 적용안됨. */
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -96,25 +123,25 @@ line-height:1.5;
 				<div class="container">
 					<ul class="promo-list">
 					
-						<li><a href="#"> <img src="/resources/images/sea.jpg"
+						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
 					
-						<li><a href="#"> <img src="/resources/images/sea.jpg"
+						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>WE ARE</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다2.</p>
 						</a></li>
 					
-						<li><a href="#"> <img src="/resources/images/sea.jpg"
+						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>WORK</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다3.</p>
 						</a></li>
 					
-						<li><a href="#"> <img src="/resources/images/sea.jpg"
+						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>BLOG</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다4.</p>

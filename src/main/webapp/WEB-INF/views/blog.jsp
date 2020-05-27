@@ -50,6 +50,28 @@ color:#424242;
 font-weight:normal;/*기본적으로 볼드라 norma해주는거*/
 line-height:1.6;
 }
+/*태블릿용 CSS*/
+@media all and (min-width:768px){
+
+/*태블릿 BLOg 영역 css*/
+.blog-section{
+margin-top:124px;
+}
+.blog-section .sec-tit{
+margin-bottom:76px;
+}
+.blog-section .blog-list li{
+float:left;/*세로되어있는걸 가로로 배치*/
+width:31.59722222222222%;
+/* 242.6666666666667px ÷ 768px*/
+margin-left:2.604166666666667%;
+/* 20px ÷ 768px*/
+margin-top:0;
+}
+.blog-section .blog-list li:first-child{
+margin-left:0;
+}
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -86,6 +108,7 @@ line-height:1.6;
 		<ul class="blog-list">
 		<li>
 		<a href=> </a>
+		<img src="/resources/images/sea.jpg" alt="">
 		<time datetime="2020-05-26">MAY 26, 2020
 		</time>
 		<a href>
@@ -93,13 +116,12 @@ line-height:1.6;
 		</a>
 		</ul>
 		</div>
-		<img src="/resources/images/sea.jpg" alt="">
 		
 		<div class="container">
-		
 		<ul class="blog-list">
 		<li>
 		<a href=> </a>
+		<img src="/resources/images/sea.jpg" alt="">
 		<time datetime="2020-05-26">MAY 26, 2020
 		</time>
 		<a href>
@@ -107,13 +129,12 @@ line-height:1.6;
 		</a>
 		</ul>
 		</div>
-		<img src="/resources/images/sea.jpg" alt="">
-		
 		<div class="container">
 		
 		<ul class="blog-list">
 		<li>
 		<a href=> </a>
+		<img src="/resources/images/sea.jpg" alt="">
 		<time datetime="2020-05-26">MAY 26, 2020
 		</time>
 		<a href>
@@ -121,7 +142,6 @@ line-height:1.6;
 		</a>
 		</ul>
 		</div>
-		<img src="/resources/images/sea.jpg" alt="">
 		</section>
 		
 		<footer class="footer">

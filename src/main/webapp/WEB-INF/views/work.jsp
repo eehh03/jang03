@@ -80,6 +80,27 @@ width:100%;/*현재 모바일 기준이라서 이미지가100프로. 반응형�
 max-width:100%;
 height:auto;/*화면안깨지게 auto로*/
 }
+/*태블릿용 CSS*/
+@media all and (min-width:768px){
+
+/*태블릿 WORK 영역 CSS*/
+.work-section{
+margin-top:118px;
+}
+.work-section .sec-tit{
+margin-bottom:76px;
+}
+.work-section .work-list li{
+float:left;
+width:50%; /*그림들을 50퍼씩 잡는다는 말.그럼 2개씩 이미지가 남옴*/
+}
+.work-section .work-list li .info{
+ left:37px;/*마우스 올렸을 때 작업나오는게 info*/
+ }
+.work-section .work-list li a:hover .info{
+transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
+}}
+
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -114,7 +135,8 @@ height:auto;/*화면안깨지게 auto로*/
 <ul class="work-list">
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
+<!-- #만해주면 클릭시 맨위로 감. 그래서 onclick~해줌 -->
 <div class="info">
 <h3>작업1</h3>
 <span>소스/작업1</span>
@@ -124,7 +146,7 @@ height:auto;/*화면안깨지게 auto로*/
 </li>
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
 <div class="info">
 <h3>작업2</h3>
 <span>소스/작업1</span>
@@ -134,7 +156,7 @@ height:auto;/*화면안깨지게 auto로*/
 </li>
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
 <div class="info">
 <h3>작업3</h3>
 <span>소스/작업1</span>
@@ -144,7 +166,7 @@ height:auto;/*화면안깨지게 auto로*/
 </li>
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
 <div class="info">
 <h3>작업4</h3>
 <span>소스/작업1</span>
@@ -154,7 +176,7 @@ height:auto;/*화면안깨지게 auto로*/
 </li>
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
 <div class="info">
 <h3>작업5</h3>
 <span>소스/작업1</span>
@@ -164,7 +186,7 @@ height:auto;/*화면안깨지게 auto로*/
 </li>
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
 <div class="info">
 <h3>작업6</h3>
 <span>소스/작업1</span>
@@ -174,7 +196,7 @@ height:auto;/*화면안깨지게 auto로*/
 </li>
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
 <div class="info">
 <h3>작업7</h3>
 <span>소스/작업1</span>
@@ -184,7 +206,7 @@ height:auto;/*화면안깨지게 auto로*/
 </li>
 
 <li>
-<a href="#">
+<a herf="#" onclick="return false">
 <div class="info">
 <h3>작업8</h3>
 <span>소스/작업1</span>

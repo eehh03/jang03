@@ -36,7 +36,10 @@ top:100%;
 left:0;
 width:100%;
 background:#3f51b5;
-z-index:11; /*10이었으니 더큰 11로 z-index추가*/
+z-index:21; 
+/*10이었으니 더큰 11로 z-index추가했으나 
+blog에서 다시 다른 메뉴로 갈 때 작업1일 곁쳐서 작업이 20이니
+21로 바꿈 */
 }
 .header .gnb li {
 border-bottom:1px solid #303f9f;
@@ -73,4 +76,34 @@ height:320px;
 margin: 21px 0;
 color: #3f51b5;
 text-align:center;
+}
+/*태블릿용 CSS*/
+@media all and (min-width:768px){/*미디어:화면, 가로가 768픽셀 안 넘게.*/
+/*태블릿 공통 css*/
+/* divider는 한페이지에 채우는거라 우리에겐 지금 필요없음. */
+/*태블릿 헤더 영역CSS*/
+.header{
+	position:static;/*고정이라 상단에*/
+	padding:28px 52px;/*안쪽여백*/
+}
+.header .gnb{ /*메뉴부분*/
+	display:block !important;/*이후나 이전 디스플레이있어서 그거무시하고 요고 적용(important)*/
+	position:static;/*고정시키겠다.*/
+	float:right;/*float떠다니는거*/
+	width:auto;/*auto면 안의내용?에 따라 달라짐.*/
+	margin-top:6px;
+	background:none;/*폰은 백그라운드가 파란색인데. 태블릿은 없으니 none로*/
+}
+.header .gnb li{
+	float:left;/*요거없으면 세로로 나옴. 이거써서 가로로나옴*/
+	margin-left:21px;
+	border-bottom:0;/*아래쪽선없음으로 처리.왜 폰에서는 메뉴에서 5줄있었는데 그거없앤.*/
+}
+.header .gnb li a{
+	padding:0;
+	font-size:16px;
+	color:#3f51b5;
+}
+.header .menu-toggle-btn{/*햄버거 버튼 없앰.*/
+	display:none !important;
 }
