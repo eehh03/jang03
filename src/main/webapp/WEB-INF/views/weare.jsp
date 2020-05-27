@@ -14,80 +14,75 @@
 	href="/images/favicon/home-touch-icon.png">
 <link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
-
 <style>
 /* WE ARE 페이지 영역 CSS */
-.display-section{
+.display-section {
 margin-top:30px;
-text-align:center; /*we are가 가운데 정렬*/
-}
-.display-section .sec-tit{
-margin-bottom:30px; /*we are가 30px 만큼 떨어짐.*/
-}
-.display-section .desc{ /*we are아래 설명 글씨체 바뀜*/
-font-family:"굴림";
-color:#616161;
-line-height:1.9; /*글 간격. 비율*/
-}
-/* WE ARE 내용 영역 CSS */
-.promotion-section{ /*그림과 글 사이 간격이 떨어짐.*/
-margin-top:68px;
-}
-.promotion-section .promo-list li{
-margin-top:52px; /*맨 아래 텍스트 가운데 정렬*/
 text-align:center;
 }
-.promotion-section .promo-list li:first-child{
-margin-top:0; /*첫번째그림과 화면설계시간부분 간격*/
+.display-section .sec-tit {
+margin-bottom:30px;
 }
-.promotion-section .promo-list li img{
-height:53px; /*이미지 작게*/
+.display-section .desc {
+font-family:"굴림";
+color:#616161;
+line-height:1.9;
 }
-.promotion-section .promo-list li h3{
+/* We Are 내용 영역 CSS */
+.promotion-section {
+margin-top:68px;
+}
+.promotion-section .promo-list li {
+margin-top:52px;
+text-align:center;
+}
+.promotion-section .promo-list li:first-child {
+margin-top: 0px;
+}
+.promotion-section .promo-list li img {
+height:202px;
+}
+.promotion-section .promo-list li h3 {
 margin:29px 0 20px 0;
-color:#3f51b5; /*blog와 같은 부분 사이사이 띄우고 색 바꿈*/
-font-weight:normal; /*normal 두꺼운것을 얇게*/
-} 
-.promotion-section .promo-list li p{
+color:#3f51b5;
+font-weight:normal;
+}
+.promotion-section .promo-list li p {
 font-size:14px;
-font-family:"궁서"; /*한글은 "" 영어는 ''*/
+font-family:"궁서";
 color:#616161;
 line-height:1.5;
-} 
-/*태블릿용 CSS. 반응형이면 기본적으로 필요함.*/
-@media all and (min-width:768px){
-/*태블릭 we are영역 css*/
-.display-section{
+}
+/* 태블릿용 CSS */
+@media all and (min-width:768px) {
+
+.promotion-section .promo-list li img {
+height:102px;
+}
+.display-section {
 margin-top:95px;
 }
+/* 태블릿 WE ARE 내용 영역 */
+.promotion-section {
+margin-top:110px;
 }
-/*태블릿 we are내용 영역css*/
-/*큰 타이틀 아래 영역*/
-.promotion-section .promo-list li{
-float:left;
-/*모바일은 세로로 나여랬으나 세로로 나열된 컨텐츠를가로로 배치하는 그래서 left쓰는*/
-width:23.046875%;
-/* 177px ÷ 768px
-그림4개를 177으로 잡고 4개로 나눠서 %로 나온것*/
-margin-left::2.604166666666667%;
-  /* 20px ÷ 768px*/
-  margin-top:0;
+.promotion-section .promo-list li {
+float:left; /* 세로로 나열된 컨텐츠를 가로로 배치 하는 역할 */
+width:23.046875%; /* 177px / 768px */ 
+margin-left:2.60416666666667%;
+/* 20px / 768px */
+margin-top:0;
 }
- /* [가변그리드공식] = 결과는 % 단위 입니다.
-  [가변element값 %] = (가변크기로 만들 박스의 가로 너비 / 가변그키로 만들 박스를 감싸고 있는 박스의 가로 너비) X 100 
-  [가변마진값 %] = (가변 마진을 적용할 마진값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
-  [가변패딩값 %] = (가변 패딩을 적용할 패딩값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
-  */
-.promotion-section .promo-list li:first-child{
-margin-left:0;/*첫번째(first~)는 left가 적용안됨. */
+.promotion-section .promo-list li:first-child {
+margin-left:0;
+}
+
 }
 </style>
-
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
 <!-- 사용자 스크립트 -->
 <script>
-
 </script>
 </head>
 <body>
@@ -103,54 +98,51 @@ margin-left:0;/*첫번째(first~)는 left가 적용안됨. */
 					<li><a href="/weare">WE ARE</a></li>
 					<li><a href="/work">WORK</a></li>
 					<li><a href="/blog">BLOG</a></li>
-					<li><a href="/contactus">CONTACT US</a></li>
+					<li><a href="contactus">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>
 			</span>
 		</header>
 		<section class="content">
-		<section class="display-section">
+
+			<section class="display-section">
 				<div class="container">
 					<h2 class="sec-tit">WE ARE</h2>
 					<p class="desc">
 						"휴먼 교육센터 디지털 컨버전스 과정 입니다." <br> "그리고, 지금은 화면 설계 시간 입니다."
 					</p>
 				</div>
-		</section>
+			</section>
 
-		<section class="promotion-section">
+			<section class="promotion-section">
 				<div class="container">
 					<ul class="promo-list">
-					
-						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
+						<li><a href="#" onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-					
-						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
+						<li><a href="#" onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
-								<h3>WE ARE</h3>
-								<p>휴면 교육센터 디지털 컨버전스 과정 입니다2.</p>
+								<h3>HOME</h3>
+								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-					
-						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
+						<li><a href="#" onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
-								<h3>WORK</h3>
-								<p>휴면 교육센터 디지털 컨버전스 과정 입니다3.</p>
+								<h3>HOME</h3>
+								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-					
-						<li><a herf="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
+						<li><a href="#" onclick="return false"> <img src="/resources/images/sea.jpg"
 								alt="">
-								<h3>BLOG</h3>
-								<p>휴면 교육센터 디지털 컨버전스 과정 입니다4.</p>
+								<h3>HOME</h3>
+								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
 					</ul>
 				</div>
 			</section>
+
 		</section>
-		
 		<footer class="footer">
 			<p class="copyright">LOGO</p>
 		</footer>

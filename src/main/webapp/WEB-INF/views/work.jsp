@@ -99,7 +99,8 @@ width:50%; /*그림들을 50퍼씩 잡는다는 말.그럼 2개씩 이미지가 
  }
 .work-section .work-list li a:hover .info{
 transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
-}}
+}
+}
 
 </style>
 
