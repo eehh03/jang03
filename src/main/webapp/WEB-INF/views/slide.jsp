@@ -118,7 +118,7 @@ position:relative;
 margin: 0 auto;/*가운데정렬*/
 }
 body header .row #brand{/*아이디가 브랜드*/
-background: url(/resources/images/logoa.png) no-repeat 0 50%;/*norepeat반복하지 않겠다 가로 0세로50*/
+background: url(/resources/images/logoa.png) no-repeat 0 50%;/*norepeat반복하지 않겠다 0은가로위치 50은 세로위치*/
 height:90px;
 width:90px;
 margin:0px;
@@ -209,8 +209,104 @@ line-height:24px;
 color: #818181;
 }
 
-
-
+body footer{
+border-top:1px solid #e2e2e2;/*실선*/
+}
+body footer p{
+padding-top:40px;
+padding-bottom:40px;
+background:url(/resources/images/logoa.png) no-repeat 100% 50%;  /*100을 0으로 하면 왼쪽으로 붙음.*/
+}
+body footer p small {
+display:block;
+line-height:1.2;
+}
+body footer p small a:link,
+body footer p small a:visited {
+color:#606060;
+text-decoration:none;
+}
+body footer p small a:hover, /*hover 마우스 오버*/
+body footer p small a:active { /*active는 마우스 클릭*/
+color: yellow;
+}
+/*요즘브라우저는 :보다 ::으로 씀*/
+::selection {
+background-color: #eee7dd;
+color:#542e1c;/*폰트색상*/
+}
+::-moz-selection{
+background-color: #eee7dd;
+color:#542e1c;
+}
+/*pc버전 끝*/
+/*태블릿: 960 이하*/
+@media all and (max-width:960px) {/*pc버전으로 한거라서 사이즈가 축소되니 max로 한것*/
+body section#contents li,
+.row .col-1, .row .col-2, .row .col-3, .row .col-4, .row .col-5, .row .col-6, 
+.row .col-7, .row .col-8, .row .col-9, .row .col-10, .row .col-11, .row .col-12 {
+text-align:center;
+}
+body header,
+body section#contents,
+body footer {
+width:100%;
+padding-left:0%;
+padding-right:0%;
+}
+section.banner_slider {display:none;}/*모바일에서는 슬라이더 안보이게*/
+body section#contents {margin-top:90px;}
+/* nav > ul {display:none;} */
+body header {z-index:999;}
+body header .hamberger{float:right;}
+body header a#pull {
+position:relative;
+top:-55px;
+}
+body header a#pull:after{
+content:"";
+background:url('/resources/images/nav-icon.png') no-repeat;
+width: 30px;
+height: 30px;
+position:absolute;
+right:0px;/*오른쪽으로 딱 달라붙게*/
+}
+body header .row #gnb {
+position:static;
+}
+body header .row #gnb ul{ background-color:#fff; width:100%;}
+body header .row #gnb ul li{
+float:none;/*전에 가로로 되어있으니 세로로하려고 none로(?)*/
+margin-right:0;
+margin-bottom:1px;
+border-top:1px solid #555;
+border-bottom: 1px solid #555;
+padding: 10px 30px;
+background-color:rgba(56, 56, 56, 1);
+}
+body header .row #gnb ul li:hober, 
+beader .row #gnb ul li:active{/*li태그에서*/
+background-color:rgba(0, 0, 0, 1);
+}
+body header .row #gnb ul li a {
+color:#fff;
+text-shadow:none;
+}
+section#contents #main img, section#contents #sub img{/*컨텐츠인 섹션안에*/
+width:90%;
+padding:10px;
+border:1px solid #e0e0e0;
+background:#fff;
+}
+footer p {
+padding-top:0px !important;
+padding-bottom:15px !important;
+width:90% !important;
+margin:0 auto !important;
+background: none !important;
+}
+}
+.nivo-caption {text-align:center !important;}/*슬라이더 이미지아래를 가운데 정렬*/
 
     </style>
     <script src="/resources/js/jquery.min.js"></script>
