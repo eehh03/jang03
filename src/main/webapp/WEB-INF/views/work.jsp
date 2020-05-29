@@ -99,9 +99,17 @@ width:50%; /*그림들을 50퍼씩 잡는다는 말.그럼 2개씩 이미지가 
  }
 .work-section .work-list li a:hover .info{
 transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
-}
-}
+}  }
 
+/*PC용 work영역 CSS*/
+@media all and (min-width:1132px){
+.work-section .sec-tit{
+text-align:left;
+} 
+.work-section .work-list li{
+width:25%;
+}
+}
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
@@ -136,7 +144,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 <ul class="work-list">
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <!-- #만해주면 클릭시 맨위로 감. 그래서 onclick~해줌 -->
 <div class="info">
 <h3>작업1</h3>
@@ -147,7 +155,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 </li>
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <div class="info">
 <h3>작업2</h3>
 <span>소스/작업1</span>
@@ -157,7 +165,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 </li>
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <div class="info">
 <h3>작업3</h3>
 <span>소스/작업1</span>
@@ -167,7 +175,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 </li>
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <div class="info">
 <h3>작업4</h3>
 <span>소스/작업1</span>
@@ -177,7 +185,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 </li>
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <div class="info">
 <h3>작업5</h3>
 <span>소스/작업1</span>
@@ -187,7 +195,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 </li>
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <div class="info">
 <h3>작업6</h3>
 <span>소스/작업1</span>
@@ -197,7 +205,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 </li>
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <div class="info">
 <h3>작업7</h3>
 <span>소스/작업1</span>
@@ -207,7 +215,7 @@ transform:translateY(37px);/*작업1 칸에서 얼마나 띄어있나*/
 </li>
 
 <li>
-<a herf="#" onclick="return false">
+<a href="#" onclick="return false">
 <div class="info">
 <h3>작업8</h3>
 <span>소스/작업1</span>

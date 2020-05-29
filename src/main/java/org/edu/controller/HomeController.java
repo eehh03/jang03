@@ -17,6 +17,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
+/** slide 페이지 파일 입니다.	페이지 만들때 기본.*/
+@RequestMapping(value = "/slide", method = RequestMethod.GET)
+public String slide(Locale locale, Model model) {
+	return "slide";
+}
+
+
 /** contact us 페이지 파일 입니다.	페이지 만들때 기본.*/
 @RequestMapping(value = "/contactus", method = RequestMethod.GET)
 public String contactus(Locale locale, Model model) {

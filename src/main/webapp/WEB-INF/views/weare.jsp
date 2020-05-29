@@ -14,6 +14,7 @@
 	href="/images/favicon/home-touch-icon.png">
 <link rel="stylesheet" type="text/css" href="/resources/css/reset.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
+
 <style>
 /* WE ARE 페이지 영역 CSS */
 .display-section {
@@ -53,36 +54,82 @@ font-family:"궁서";
 color:#616161;
 line-height:1.5;
 }
-/* 태블릿용 CSS */
-@media all and (min-width:768px) {
+/*태블릿용 CSS. 반응형이면 기본적으로 필요함.*/
+@media all and (min-width:768px){
 
 .promotion-section .promo-list li img {
 height:102px;
 }
-.display-section {
+
+/*태블릭 we are영역 css*/
+.display-section{
 margin-top:95px;
 }
-/* 태블릿 WE ARE 내용 영역 */
-.promotion-section {
-margin-top:110px;
+/*태블릿 we are내용 영역css*/
+/*큰 타이틀 아래 영역*/
+.promotion-section .promo-list li{
+float:left;
+/*모바일은 세로로 나여랬으나 세로로 나열된 컨텐츠를가로로 배치하는 그래서 left쓰는*/
+width:23.046875%;
+/* 177px ÷ 768px
+그림4개를 177으로 잡고 4개로 나눠서 %로 나온것*/
+margin-left::2.604166666666667%;
+  /* 20px ÷ 768px*/
+  margin-top:0;
 }
-.promotion-section .promo-list li {
-float:left; /* 세로로 나열된 컨텐츠를 가로로 배치 하는 역할 */
-width:23.046875%; /* 177px / 768px */ 
-margin-left:2.60416666666667%;
-/* 20px / 768px */
-margin-top:0;
+ /* [가변그리드공식] = 결과는 % 단위 입니다.
+  [가변element값 %] = (가변크기로 만들 박스의 가로 너비 / 가변그키로 만들 박스를 감싸고 있는 박스의 가로 너비) X 100 
+  [가변마진값 %] = (가변 마진을 적용할 마진값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
+  [가변패딩값 %] = (가변 패딩을 적용할 패딩값 / 적용할 박스를 감싸고 있는 박스의 가로 너비) X 100
+  */
+.promotion-section .promo-list li:first-child{
+margin-left:0;/*첫번째(first~)는 left가 적용안됨. */
 }
-.promotion-section .promo-list li:first-child {
-margin-left:0;
 }
 
+/*PC용 CSS*/
+@media all and (min-width:1132px){
+/*PC we are 타이틀 영역 css*/
+.display-section{
+text-align:left;
+}
+.display-section .sec-tit{
+float:left;
+margin-bottom:0;
+}
+.display-section .desc {
+position:relative;
+float:right;
+padding-left:20px;
+font-family:"바탕";
+color:#616161;
+line-height:1.9;
+}
+.display-section .desc:before{
+display:block;
+position:absolute;
+top:9px;
+left:-90px;
+width:2px;
+height:44px;
+background:#e54a4a;/*weare 옆에 빨간줄*/
+content:"";
+}
+/*PC WE ARE 내용 영역*/
+.promotion-section .promo-list li{
+width:23.23.67491166077739%;
+/* 268px ÷ 1132px*/
+margin-left:1.76678445229682%;
+/* 20px ÷ 1132px*/
+}
 }
 </style>
+
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
 <!-- 사용자 스크립트 -->
 <script>
+
 </script>
 </head>
 <body>
@@ -98,7 +145,7 @@ margin-left:0;
 					<li><a href="/weare">WE ARE</a></li>
 					<li><a href="/work">WORK</a></li>
 					<li><a href="/blog">BLOG</a></li>
-					<li><a href="contactus">CONTACT US</a></li>
+					<li><a href="/contactus">CONTACT US</a></li>
 				</ul>
 			</nav>
 			<span class="menu-toggle-btn"> <span></span> <span></span> <span></span>

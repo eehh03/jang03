@@ -53,25 +53,43 @@ line-height:1.6;
 /*태블릿용 CSS*/
 @media all and (min-width:768px){
 /* 태블릿 BLOG 영역 CSS */
-  .blog-section{
-  margin-top:124px;
-  }
-  .blog-section .sec-tit{
-  margin-bottom:76px;
-  }
-  .blog-section .blog-list li{
-  float:left;
-  width:31.59722222222222%;
-  /* 242.6666666666667px ÷ 768px*/
-  margin-left:2.604166666666667%;
-  /* 20px ÷ 768px*/
-  margin-top:0;
-  }
-  .blog-section .blog-list li:first-child{
-  margin-left:0;
-  }
+.blog-section{
+margin-top:124px;
+}
+.blog-section .sec-tit{
+margin-bottom:76px;
+}
+.blog-section .blog-list li{
+float:left;
+width:31.59722222222222%;
+/* 242.6666666666667px ÷ 768px*/
+margin-left:2.604166666667%;
+/* 20px ÷ 768px*/
+margin-top:0;
+}
+.blog-section .blog-list li:first-child{
+margin-left:0;
+}
+}
 
-
+/*PC BLOG영역 CSS*/
+@media all and (min-width:1132px){
+.blog-section .sec-tit{
+float:left;
+margin-bottom:0;
+margin-left:100px;
+}/*타이틀은 왼쪽으로 배치*/
+.blog-section .blog-list{
+float:right;
+width:74.55555555%;
+/* 844px ÷ 1132px*/
+}
+.blog-section .blog-list li{/*li는 항상 left,right가 붙어*/
+width:31.75355555%;
+/* 268px ÷ 844px*/
+margin-left:2.36966666%;
+/* 20px ÷ 844px*/
+}
 }
 </style>
 
@@ -110,31 +128,31 @@ line-height:1.6;
 		
 		
 		<li>
-		<a href=> </a>
-		<img src="/resources/images/sea.jpg" alt="">
+		<a href="#" onclick="return false"> 
+		<img src="/resources/images/sea.jpg" alt=""> </a>
 		<time datetime="2020-05-26">MAY 26, 2020
 		</time>
-		<a href>
+		<a href="">
 		<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
 		</a>
 		</li>
 		
 		<li>
-		<a href=> </a>
-		<img src="/resources/images/sea.jpg" alt="">
+		<a href="#" onclick="return false"> 
+		<img src="/resources/images/sea.jpg" alt=""> </a>
 		<time datetime="2020-05-26">MAY 26, 2020
 		</time>
-		<a href>
+		<a href="">
 		<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
 		</a>
 		</li>
 		
 		<li>
-		<a href=> </a>
-		<img src="/resources/images/sea.jpg" alt="">
+		<a href="#" onclick="return false"> 
+		<img src="/resources/images/sea.jpg" alt=""> </a>
 		<time datetime="2020-05-26">MAY 26, 2020
 		</time>
-		<a href>
+		<a href="">
 		<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
 		</a>
 		</li>

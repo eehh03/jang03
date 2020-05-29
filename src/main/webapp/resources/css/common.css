@@ -1,5 +1,4 @@
 @charset "UTF-8";
-<style>
 /* 공통 CSS */
 .container {
 width:90%;
@@ -106,4 +105,5 @@ text-align:center;
 }
 .header .menu-toggle-btn{/*햄버거 버튼 없앰.*/
 	display:none !important;
+}
 }

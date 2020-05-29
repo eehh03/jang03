@@ -78,7 +78,8 @@ margin-top:176px;
 .contact-section .sec-tit{
 margin-bottom:76px;
 }
-.contact-section .form-box .form, .contact-section .form-box .textarea{
+.contact-section .form-box .form, 
+.contact-section .form-box .textarea{
 float:left;
 width:48.69791666666667%;
 /* 374px ÷ 768px*/
@@ -89,8 +90,28 @@ margin-right:2.604166666666667%;
 }
 .contact-section .form-box .form input:last-child{
 margin-bottom:0;
+} }
+
+/*PC용 contact us CSS*/
+@media all and (min-width:1132px){
+
+.contact-section .sec-tit{
+float:left;
+margin-bottom:0;
 }
+.contact-section .form-box{
+float:right;/*타이틀이 가로이니 박스를 오른쪽에 둬서 한줄에*/
+width:74.5583333333333%;
 }
+.contact-section .form-box .form, 
+.contact-section .form-box .textarea{
+width:48.8151658777777%;
+}
+.contact-section .form-box .form{
+margin-right:2.3696688888888%;
+  }
+}
+
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
