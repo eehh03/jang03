@@ -100,7 +100,6 @@ background: url(/resources/images/header-bg.jpg) no-repeat 50% 55%;
 background-size:cover;/*3개 같은말*/
 position:fixed;
 width:100%;
-top:0px;
 height:90px;
 z-index:999;
 }   
@@ -190,7 +189,7 @@ body section#contents li{
 margin-bottom:60px;
 }
 body section#contents li img{
-border:1px solid red;
+border:1px solid #e0e0e0;
 -webkit-box-sizing:border-box;
 -moz-box-sizing:border-box;
 box-siwing:border-box;
@@ -208,7 +207,6 @@ font-size:14px;
 line-height:24px;
 color: #818181;
 }
-
 body footer{
 border-top:1px solid #e2e2e2;/*실선*/
 }
@@ -247,16 +245,14 @@ body section#contents li,
 .row .col-7, .row .col-8, .row .col-9, .row .col-10, .row .col-11, .row .col-12 {
 text-align:center;
 }
-body header,
-body section#contents,
-body footer {
+body header,body section#contents,body footer {
 width:100%;
 padding-left:0%;
 padding-right:0%;
 }
-section.banner_slider {display:none;}/*모바일에서는 슬라이더 안보이게*/
+section.banner_slider {display:none;} /*모바일에서는 슬라이더 안보이게*/
 body section#contents {margin-top:90px;}
-/* nav > ul {display:none;} */
+
 body header {z-index:999;}
 body header .hamberger{float:right;}
 body header a#pull {
@@ -271,6 +267,7 @@ height: 30px;
 position:absolute;
 right:0px;/*오른쪽으로 딱 달라붙게*/
 }
+nav > ul {display:none;} /* 햄버거 메뉴 사라짐.*/
 body header .row #gnb {
 position:static;
 }
@@ -307,12 +304,44 @@ background: none !important;
 }
 }
 .nivo-caption {text-align:center !important;}/*슬라이더 이미지아래를 가운데 정렬*/
-
+.nivoSlider { height: 400px !important;} 
+.nivoSlider img {height:400px !important;}/*이미지전체 400으로*/
     </style>
     <script src="/resources/js/jquery.min.js"></script>
     <script type="text/javascript">
     jQuery(function($){ //j쿼리 시작 : $(document).ready(function(){ }); == $(function(){ }); 과 동일
+  //6.1 모바일메뉴 로딩시
+    var pull=$('#pull');  //자바스크립트 pull이라는 영역안에 css인 #pull영역을 집어넣겠다 
+    var menu=$('nav>ul');  //이 영역을 menu로 
+    $(pull).on('click',function(e){  //pull영역에 click할때 이벤트 발생시 이벤트를 시행한다.
+    	var w =$(window).width();  //화면괄호값에 w지원
+    if(w<960){
+    	if(menu.is(':visible')){  //visible(보였을때) 슬라이드코글인 메뉴를 보이거나 안보이거나 하겠다.
+    		//alert('닫을때');
+    		menu.slideToggle("fast");
+    		return;
+    	}
+    	if(menu.is(':hidden')){
+    		//alert('열때');
+    		menu.slideToggle("slow");
+    		return;
+    	}
+    }
+    });//click 이벤트 끝
+  //모바일에 토글에 대한 스타일->PC에서는 없앤다
+  $(window).resize(function(){//resize시 function(기능)을 준다
+	  var w=$(window).width();//window 사이즈 알고
+  var menu=$('nav>ul');
+	  if(w>960){
+		  menu.removeAttr('style');
+	  }else{
+		  
+	  }
+	  return;
+  });
     });
+    
+
     </script>
 </head>
 <body>
@@ -333,9 +362,32 @@ background: none !important;
 		</nav>
 	   </div>
 	</header><!-- e:header-->
+	 <script src="/resources/js/jquery.nivo.slider.js"></script>
+  <link href="/resources/css/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
+  <script type="text/javascript">
+  jQuery(function($){ 
+      $('#slider').nivoSlider({
+    	  effect:'slideInLeft', //좌우로 왔다갔다
+    	  directionNav:true, 
+    	  controlNav:false,
+    	  pauseOnHover:false, //슬라이드에 마우스 올리면 정지가 기본값인데 슬라이드 정지안되게
+    	  prevText:'<span style="font-size:30px; color:#fff; padding-left:10px;">&lt;</span>',
+		  nextText: '<span style="font-size:30px; color:#fff; padding-right:10px;">&gt;</span>',
+      }); //슬라이드화면 좌우 화살표키 gt(크다)는 오른쪽 lt(작다)는 왼쪽 나오게
+      $('.nivo-prevNav').on('mouseover', function(){
+          $('#slider img').attr("data-transition","slideInRight");
+     });
+     $('.nivo-nextNav').on('mouseover', function(){
+          $('#slider img').attr("data-transition","slideInLeft");
+     });//왼쪽클릭 왼쪽 오른쪽 클릭 오른쪽
+});
+  </script>
   <section class="banner_slider">
   	<div id="slider" class="nivoSlider">
       <img src="/resources/images/house.jpg" title="슬라이드1" />
+      <img src="/resources/images/slide1.jpg" title="슬라이드2" />
+      <img src="/resources/images/slide2.jpg" title="슬라이드3" />
+      <img src="/resources/images/slide3.jpg" title="슬라이드4" />
     </div>
   </section>
 	<section id="contents" class="row">

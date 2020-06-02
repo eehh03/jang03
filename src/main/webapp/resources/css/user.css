@@ -1,4 +1,10 @@
 @charset "UTF-8";
+
+#logo {
+	padding-top: 0px;
+    margin-top: 0px;
+}
+    
 /* HOME 슬라이더 영역 CSS */
 .slider img {
 display:block;
@@ -6,6 +12,19 @@ width:100%;
 max-width:100%;
 height:auto;
 }
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/*구글 나눔폰트 가져오기*/
+body, h1, h2, h3, h4, h5, h6, li, p 
+{font-family:"Nanum Gothic","NanumGothic" !important;
+font-size:14px; line-height:24px;}
+body {margin:0px; padding:0px;}/*reset.css에 들어있는거*/
+  /* 속성설명
+    -webkit- : 구글, 사파리 브라우저에 적용
+    -moz- : 파이어폭스 브라우저에 적용
+    -ms- : 익스플로러에 적용, 보통 생략합니다.
+    -o- : 오페라 브라우저에 적용
+    */
 
 /* WE ARE 페이지 영역 CSS */
 .display-section {
@@ -16,7 +35,7 @@ text-align:center;
 margin-bottom:30px;
 }
 .display-section .desc {
-font-family:"굴림";
+font-family:"궁서";
 color:#616161;
 line-height:1.9;
 }
@@ -41,7 +60,7 @@ font-weight:normal;
 }
 .promotion-section .promo-list li p {
 font-size:14px;
-font-family:"궁서";
+font-family:"굴림";
 color:#616161;
 line-height:1.5;
 }
@@ -305,7 +324,7 @@ margin-bottom:0;
 position:relative;
 float:right;
 padding-left:20px;
-font-family:"바탕";
+font-family:"궁서";
 color:#616161;
 line-height:1.9;
 }
