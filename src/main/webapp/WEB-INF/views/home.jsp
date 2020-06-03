@@ -45,11 +45,9 @@ opacity:0.5;/*투명도*/
 <!-- 더미 데이터:CSS작업전 내용 -->
 	<div id="wrap">
 		<header class="header cfixed">
-			<h1 id="logo"><img src="/resources/images/logoaa.png" alt="" />
-			</h1>
-<!-- <h1 class="logo">
-<a href="">LOGO</a>
-</h1> -->
+			<!-- <h1 class="logo">
+			<a href="">LOGO</a>
+			</h1> -->
 			
 			<nav>
 				<ul class="gnb">

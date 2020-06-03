@@ -1,10 +1,4 @@
-@charset "UTF-8";
-
-#logo {
-	padding-top: 0px;
-    margin-top: 0px;
-}
-    
+@charset "UTF-8"; 
 /* HOME 슬라이더 영역 CSS */
 .slider img {
 display:block;

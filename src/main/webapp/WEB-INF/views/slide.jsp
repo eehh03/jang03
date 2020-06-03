@@ -105,7 +105,7 @@ z-index:999;
 }   
 /*바디안쪽 섹션만 가르키는*/
 body > section {/* >는 바로 다음 section(부모)만 적용. >없으면 section(부모,자식,손자 등)안에 섹션 다 적용.두번째 자식은 적용 두번째손자는 적용안됨*/
-margin-top:90px;
+margin-top:0px;
 }
 body ul, body ol {
 padding:0;
@@ -306,7 +306,24 @@ background: none !important;
 .nivo-caption {text-align:center !important;}/*슬라이더 이미지아래를 가운데 정렬*/
 .nivoSlider { height: 400px !important;} 
 .nivoSlider img {height:400px !important;}/*이미지전체 400으로*/
-    </style>
+
+	.row{
+	margin-right: auto !important;
+    margin-left: auto !important;
+    }
+    /*왼쪽으로 쏠려서 위에다가 만들어줌. important씀으로 그전에 무엇이 있든 위에거를 적용하겠다*/
+ 
+  .item img{
+    height: 600px !important;
+    width: 100% !important;
+    }/*아이템 영역안 이미지 사이즈*/
+    
+  .carousel-control .slide_arrow {
+ position: absolute;
+ top: 50% !important; 
+  }
+  
+</style>
     <script src="/resources/js/jquery.min.js"></script>
     <script type="text/javascript">
     jQuery(function($){ //j쿼리 시작 : $(document).ready(function(){ }); == $(function(){ }); 과 동일
@@ -361,8 +378,10 @@ background: none !important;
 			</ul>
 		</nav>
 	   </div>
-	</header><!-- e:header-->
-	 <script src="/resources/js/jquery.nivo.slider.js"></script>
+	</header>
+<!-- e:header-->
+<!--  6.3 니보슬라이더 작동 스크립트(아래)
+  <script src="/resources/js/jquery.nivo.slider.js"></script>
   <link href="/resources/css/nivo-slider.css" media="screen" rel="stylesheet" type="text/css">
   <script type="text/javascript">
   jQuery(function($){ 
@@ -378,17 +397,81 @@ background: none !important;
           $('#slider img').attr("data-transition","slideInRight");
      });
      $('.nivo-nextNav').on('mouseover', function(){
-          $('#slider img').attr("data-transition","slideInLeft");
+          $('#slider img').attr("slideInLeft");
      });//왼쪽클릭 왼쪽 오른쪽 클릭 오른쪽
 });
   </script>
-  <section class="banner_slider">
+  -->
+  <!--Carousel 스크립트가져와서 붙임 -->
+  
+ <!-- 부트스트랩 -->
+ 	<link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+ <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+	
+	<script>
+//	jQuery(function($){ 
+	$(document).ready(function($) {
+	$('.carousel').carousel({
+		  interval: 2000,
+		  pause: false
+		})
+	 });
+	</script>
+	<section class="banner_slider">
+
+   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li><!-- 사진아래 동그라미 4개 -->
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+
+  </ol>
+  <div class="carousel-inner">
+   <div class="item active">
+      <img src="/resources/images/house.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/slide1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/slide2.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="item">
+      <img src="/resources/images/slide3.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <!-- <a class ="left carousel-control" style="font-size:40px;font-weight:bold;" href="#carouselExampleIndicators"
+   data-slide="prev" onclick="$('#myCarousel').carousel('prev')"> 
+   <span class="slide_arrow"> &lt; </span>
+   </a>
+   
+  <a class ="right carousel-control" style="font-size:40px;font-weight:bold;" href="#carouselExampleIndicators" 
+  data-slide="next" onclick="$('#myCarousel').carousel('next')">
+  <span class="slide_arrow"> &gt; </span> 
+  </a> -->
+  
+  <a class="left carousel-control" href="#carouselExampleIndicators" role="button" data-slide="prev">
+ 	<span class ="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	</a>
+  
+  <a class="right carousel-control" href="#carouselExampleIndicators" role="button" data-slide="next">
+     <span class ="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+ 	 </a>
+</div>
+
+
+  <!-- 니보슬라이더용 비지니스 폼 
   	<div id="slider" class="nivoSlider">
       <img src="/resources/images/house.jpg" title="슬라이드1" />
       <img src="/resources/images/slide1.jpg" title="슬라이드2" />
       <img src="/resources/images/slide2.jpg" title="슬라이드3" />
       <img src="/resources/images/slide3.jpg" title="슬라이드4" />
     </div>
+    -->
+    
   </section>
 	<section id="contents" class="row">
 		<article id="main">

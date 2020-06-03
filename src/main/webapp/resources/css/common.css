@@ -22,6 +22,7 @@ padding:18px 5%;
 }
 .header .logo {
 float:left;
+
 }
 .header .logo a {
 font-size:26px;
@@ -36,6 +37,7 @@ left:0;
 width:100%;
 background:#3f51b5;
 z-index:21; 
+
 /*10이었으니 더큰 11로 z-index추가했으나 
 blog에서 다시 다른 메뉴로 갈 때 작업1일 곁쳐서 작업이 20이니
 21로 바꿈 */
@@ -84,8 +86,9 @@ text-align:center;
 /* divider는 한페이지에 채우는거라 우리에겐 지금 필요없음. */
 /*태블릿 헤더 영역CSS*/
 .header{
-	position:static;/*고정이라 상단에*/
+	position:static;/*상단에 고정*/
 	padding:28px 52px;/*안쪽여백*/
+	background: url(/resources/images/logoa.png) no-repeat 5% 50%;
 }
 .header .gnb{ /*메뉴부분*/
 	display:block !important;/*이후나 이전 디스플레이있어서 그거무시하고 요고 적용(important)*/
