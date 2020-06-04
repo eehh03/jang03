@@ -41,6 +41,7 @@
 	width: 100%;
 	background: #3f51b5;
 	z-index: 21;
+
 }
 
 .header .gnb li {
@@ -92,7 +93,6 @@
 	.header {
 		position: static;
 		padding: 28px 52px;
-		background: url(/resources/images/logoa.png) no-repeat 5% 50%;
 	}
 	.header .gnb {
 		display: block !important;
@@ -101,6 +101,7 @@
 		width: auto;
 		margin-top: 6px;
 		background: none;
+		
 	}
 	.header .gnb li {
 		float: left;
