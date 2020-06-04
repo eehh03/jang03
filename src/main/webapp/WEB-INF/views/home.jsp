@@ -16,39 +16,38 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/common.css">
 <link rel="stylesheet" type="text/css" href="/resources/css/user.css">
 <style>
-.go_top{
-position: fixed;
-right:20px;
-bottom:112px;/*화면끝에 */
-text-align:center;
-background:yellow;
-z-index:100;
-padding:20px;/*좌우상하여백 */
-opacity:0.5;/*투명도*/
+.go_top {
+	position: fixed;
+	right: 20px;
+	bottom: 112px;
+	text-align: center;
+	background: yellow;
+	z-index: 100;
+	padding: 20px;
+	opacity: 0.5;
 }
-
 </style>
 
 <script src="/resources/js/jquery.min.js"></script>
 <script src="/resources/js/common.js"></script>
 <!-- 사용자 스크립트 -->
 <script>
-
+	
 </script>
 
 <!-- 부트스트랩 -->
-    <link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
-    <script src="/resources/bootstrap/js/bootstrap.min.js"></script>
+<script src="/resources/bootstrap/js/bootstrap.min.js"></script>
 </head>
 <body>
-<!-- 더미 데이터:CSS작업전 내용 -->
+	<!-- 더미 데이터:CSS작업전 내용 -->
 	<div id="wrap">
 		<header class="header cfixed">
 			<!-- <h1 class="logo">
 			<a href="">LOGO</a>
 			</h1> -->
-			
+
 			<nav>
 				<ul class="gnb">
 					<li><a href="/">HOME</a></li>
@@ -64,41 +63,41 @@ opacity:0.5;/*투명도*/
 		<article class="slider">
 			<img src="/resources/images/sea.jpg" alt="">
 		</article>
-		
+
 		<section class="content">
-		<section class="display-section">
+			<section class="display-section">
 				<div class="container">
 					<h2 class="sec-tit" id="weare">WE ARE</h2>
 					<p class="desc">
 						"휴먼 교육센터 디지털 컨버전스 과정 입니다." <br> "그리고, 지금은 화면 설계 시간 입니다."
 					</p>
 				</div>
-		</section>
+			</section>
 
-		<section class="promotion-section">
+			<section class="promotion-section">
 				<div class="container">
 					<ul class="promo-list">
-					
-						<li><a href="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
-								alt="">
+
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/sea.jpg" alt="">
 								<h3>HOME</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다.</p>
 						</a></li>
-					
-						<li><a href="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
-								alt="">
+
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/sea.jpg" alt="">
 								<h3>WE ARE</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다2.</p>
 						</a></li>
-					
-						<li><a href="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
-								alt="">
+
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/sea.jpg" alt="">
 								<h3>WORK</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다3.</p>
 						</a></li>
-					
-						<li><a href="#"  onclick="return false"> <img src="/resources/images/sea.jpg"
-								alt="">
+
+						<li><a href="#" onclick="return false"> <img
+								src="/resources/images/sea.jpg" alt="">
 								<h3>BLOG</h3>
 								<p>휴면 교육센터 디지털 컨버전스 과정 입니다4.</p>
 						</a></li>
@@ -106,193 +105,160 @@ opacity:0.5;/*투명도*/
 				</div>
 			</section>
 		</section>
-		
+
 		<section class="work-section cfixed">
-<h2 class="sec-tit" id="work">WORK</h2>
-<ul class="work-list">
+			<h2 class="sec-tit" id="work">WORK</h2>
+			<ul class="work-list">
 
-<li>
-<a href="#" onclick="return false">
-<!-- #만해주면 클릭시 맨위로 감. 그래서 onclick~해줌 -->
-<div class="info">
-<h3>작업1</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업1</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
 
-<li>
-<a href="#" onclick="return false">
-<div class="info">
-<h3>작업2</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업2</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
 
-<li>
-<a href="#" onclick="return false">
-<div class="info">
-<h3>작업3</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업3</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
 
-<li>
-<a href="#" onclick="return false">
-<div class="info">
-<h3>작업4</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업4</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
 
-<li>
-<a href="#" onclick="return false">
-<div class="info">
-<h3>작업5</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업5</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
 
-<li>
-<a href="#" onclick="return false">
-<div class="info">
-<h3>작업6</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업6</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
 
-<li>
-<a href="#" onclick="return false">
-<div class="info">
-<h3>작업7</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업7</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
 
-<li>
-<a href="#" onclick="return false">
-<div class="info">
-<h3>작업8</h3>
-<span>소스/작업1</span>
-</div>
-<img src="/resources/images/sea.jpg" alt="">
-</a>
-</li>
-</ul>
-</section>
-		
-				<section class="blog-section">
-		<div class="container">
-		<h2 class="sec-tit" id="blog">BLOG</h2>
-		<ul class="blog-list">
-		
-		
-		<li>
-		<a href="#" onclick="return false"> 
-		<img src="/resources/images/sea.jpg" alt=""> </a>
-		<time datetime="2020-05-26">MAY 26, 2020
-		</time>
-		<a href="">
-		<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
-		</a>
-		</li>
-		
-		<li>
-		<a href="#" onclick="return false"> 
-		<img src="/resources/images/sea.jpg" alt=""> </a>
-		<time datetime="2020-05-26">MAY 26, 2020
-		</time>
-		<a href="">
-		<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
-		</a>
-		</li>
-		
-		<li>
-		<a href="#" onclick="return false"> 
-		<img src="/resources/images/sea.jpg" alt=""> </a>
-		<time datetime="2020-05-26">MAY 26, 2020
-		</time>
-		<a href="">
-		<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
-		</a>
-		</li>
-		
-		</ul>
-		</div>
+				<li><a href="#" onclick="return false">
+						<div class="info">
+							<h3>작업8</h3>
+							<span>소스/작업1</span>
+						</div> <img src="/resources/images/sea.jpg" alt="">
+				</a></li>
+			</ul>
 		</section>
-		
 
-<section class="contact-section">
-                <div class="container">
-                    <h2 class="sec-tit" id="contactus">CONTACT</h2>
-                    <div class="form-box">
-                        <form action="" method="">
-                            <fieldset class="cfixed">
-                                <legend class="blind">CONTACT US</legend>
-                                <div class="form">
-                                    <label for="name" class="blind">name</label>
-                                    <input type="text" id="name" placeholder="Name">
-                                    <label for="phone" class="blind">phone</label>
-                                    <input type="tel" id="phone" placeholder="Phone">
-                                    <label for="email" class="blind">email</label>
-                                    <input type="email" id="email" placeholder="Email Address">
-                                </div>
-                                <div class="textarea">
-                                    <label for="message" class="blind">message</label>
-                                    <textarea name="message" id="message" placeholder="Message"></textarea>
-                                </div>
-                            </fieldset>
-                            <div class="send-btn">
-                                <button type="button" class="" data-toggle="modal" data-target="#exampleModal"> 메세지 보내기 </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-            
-            
+		<section class="blog-section">
+			<div class="container">
+				<h2 class="sec-tit" id="blog">BLOG</h2>
+				<ul class="blog-list">
+
+					<li><a href="#" onclick="return false"> <img
+							src="/resources/images/sea.jpg" alt="">
+					</a> <time datetime="2020-05-26">MAY 26, 2020 </time> <a href="">
+							<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
+					</a></li>
+
+					<li><a href="#" onclick="return false"> <img
+							src="/resources/images/sea.jpg" alt="">
+					</a> <time datetime="2020-05-26">MAY 26, 2020 </time> <a href="">
+							<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
+					</a></li>
+
+					<li><a href="#" onclick="return false"> <img
+							src="/resources/images/sea.jpg" alt="">
+					</a> <time datetime="2020-05-26">MAY 26, 2020 </time> <a href="">
+							<h3>타임스페이스는 사용자 중심의 웹페이지를 제작하는 회사입니다.</h3>
+					</a></li>
+
+				</ul>
+			</div>
+		</section>
+
+		<section class="contact-section">
+			<div class="container">
+				<h2 class="sec-tit" id="contactus">CONTACT</h2>
+				<div class="form-box">
+					<form action="" method="">
+						<fieldset class="cfixed">
+							<legend class="blind">CONTACT US</legend>
+							<div class="form">
+								<label for="name" class="blind">name</label> <input type="text"
+									id="name" placeholder="Name"> <label for="phone"
+									class="blind">phone</label> <input type="tel" id="phone"
+									placeholder="Phone"> <label for="email" class="blind">email</label>
+								<input type="email" id="email" placeholder="Email Address">
+							</div>
+							<div class="textarea">
+								<label for="message" class="blind">message</label>
+								<textarea name="message" id="message" placeholder="Message"></textarea>
+							</div>
+						</fieldset>
+						<div class="send-btn">
+							<button type="button" class="" data-toggle="modal"
+								data-target="#exampleModal">메세지 보내기</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
 		<footer class="footer">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.1908531424174!2d127.18028131558675!3d36.83790497994078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b293c64087a5b%3A0x1873dee0e6399a00!2z67Cx7ISd66y47ZmU64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1513569521608" width="600" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3193.1908531424174!2d127.18028131558675!3d36.83790497994078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b293c64087a5b%3A0x1873dee0e6399a00!2z67Cx7ISd66y47ZmU64yA7ZWZ6rWQ!5e0!3m2!1sko!2skr!4v1513569521608"
+				width="600" height="450" frameborder="0" style="border: 0"
+				allowfullscreen=""></iframe>
 			<p class="copyright">LOGO</p>
 		</footer>
 	</div>
-	<p class="go_top"><class="s_point"> <a href="#" >TOP</a></p>
+	<p class="go_top">
+		<class="s_point"> <a href="#">TOP</a>
+	</p>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-         <input class="form-control" type="text" id="message" placeholder="메세지 내용을 입력해 주세요.">
-         
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info" >수정</button>
-        <button type="button" class="btn btn-danger">삭제</button>
-        <button type="button" class="btn" data-dismiss="modal">닫기</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<input class="form-control" type="text" id="message"
+						placeholder="메세지 내용을 입력해 주세요.">
 
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-info">수정</button>
+					<button type="button" class="btn btn-danger">삭제</button>
+					<button type="button" class="btn" data-dismiss="modal">닫기</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </body>
 </html>
