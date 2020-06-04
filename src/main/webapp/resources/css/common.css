@@ -46,6 +46,7 @@
 
 .header .gnb li {
 	border-bottom: 1px solid #303f9f;
+	
 }
 
 .header .gnb li a {
@@ -53,6 +54,7 @@
 	padding: 14px 0 14px 5%;
 	font-size: 14px;
 	color: #fff;
+	
 }
 
 .header .menu-toggle-btn {
@@ -99,7 +101,7 @@
 		position: static;
 		float: right;
 		width: auto;
-		margin-top: 6px;
+		margin-top: 25px;
 		background: none;
 		
 	}
