@@ -44,7 +44,7 @@
 	<!-- 더미 데이터:CSS작업전 내용 -->
 	<div id="wrap">
 		<header class="header cfixed">
-		<h1 id="logo"><img src="/resources/images/logoa.png"/> </h1>
+		 <h1 id="logo"><img src="/resources/images/logoa.png"/> </h1>
 
 			<!-- <h1 class="logo">
 			<a href="">LOGO</a>
