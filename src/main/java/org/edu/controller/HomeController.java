@@ -18,37 +18,47 @@ public class HomeController {
 private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 
 /** slide 페이지 파일 입니다.	페이지 만들때 기본.*/
-@RequestMapping(value = "/slide", method = RequestMethod.GET)
+@RequestMapping(value = "/sample/slide", method = RequestMethod.GET)
 public String slide(Locale locale, Model model) {
-	return "slide";
+	return "sample/slide";
 }
 
 
 /** contact us 페이지 파일 입니다.	페이지 만들때 기본.*/
-@RequestMapping(value = "/contactus", method = RequestMethod.GET)
+@RequestMapping(value = "/sample/contactus", method = RequestMethod.GET)
 public String contactus(Locale locale, Model model) {
-	return "contactus";
+	return "sample/contactus";
 }
 
 /** blog 페이지 파일 입니다.	페이지 만들때 기본.*/
-@RequestMapping(value = "/blog", method = RequestMethod.GET)
+@RequestMapping(value = "/sample/blog", method = RequestMethod.GET)
 public String blog(Locale locale, Model model) {
-	return "blog";
+	return "sample/blog";
 }
 
 /** work 페이지 파일 입니다.	페이지 만들때 기본.*/
-@RequestMapping(value = "/work", method = RequestMethod.GET)
+@RequestMapping(value = "/sample/work", method = RequestMethod.GET)
 public String work(Locale locale, Model model) {
-	return "work";
+	return "sample/work";
 }
 
 /** we are 페이지 파일 입니다.	페이지 만들때 기본.*/
-	@RequestMapping(value = "/weare", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample/weare", method = RequestMethod.GET)
 	public String weare(Locale locale, Model model) {
-		return "weare";
+		return "sample/weare";
+	}
+	/** 샘플 파일 입니다.	페이지 만들때 기본.*/
+	@RequestMapping(value = "/sample/HTMLtest", method = RequestMethod.GET)
+	public String HTMLtest(Locale locale, Model model) {
+		return "sample/HTMLtest";
+	}
+
+	/** 샘플 파일 홈 입니다.	페이지 만들때 기본.*/
+	@RequestMapping(value = "/sample/", method = RequestMethod.GET)
+	public String sample(Locale locale, Model model) {
+		return "sample/home";
 	}
 	
-
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
