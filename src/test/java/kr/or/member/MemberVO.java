@@ -10,15 +10,27 @@ public class MemberVO {
 		return "MemberVO클래스 [이름은" + name + ", 나이는" + age + ", 전화번호는" + phoneNum + "]";
 	}
 
-	public String getName() {	return name;	}
+	public String getName() {
+		return name;
+	}
 
-	public void setName(String name) {	this.name = name;	}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-	public int getAge() {	return age;	}
+	public int getAge() {
+		return age;
+	}
 
-	public void setAge(int age) {	this.age = age;	}
+	public void setAge(int age) {
+		this.age = age;
+	}
 
-	public String getPhoneNum() {	return phoneNum;	}
+	public String getPhoneNum() {
+		return phoneNum;
+	}
 
-	public void setPhoneNum(String phoneNum) {	this.phoneNum = phoneNum;	}
+	public void setPhoneNum(String phoneNum) {
+		this.phoneNum = phoneNum;
+	}
 }
