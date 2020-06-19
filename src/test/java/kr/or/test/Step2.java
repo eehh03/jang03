@@ -6,7 +6,7 @@ class MemberVO {
 	private String phoneNum; //보안때문에 다른곳접근 못하기 위해 private씀.
 	
 	@Override
-	public String toString() {
+	public String toString() { //toString출력함수
 		return "MemberVO클래스 [이름은" + name + ", 나이는" + age + ", 전화번호는" + phoneNum + "]";
 	}
 	//위에 어디 있는데 내꺼를 쓰겠다. override

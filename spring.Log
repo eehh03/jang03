@@ -1,0 +1,417 @@
+[2020-06-19 09:51:36] DEBUG: Log4jTest.java:13 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
+[2020-06-19 09:51:36] INFO : Log4jTest.java:14 - 인포!!
+[2020-06-19 09:51:36] WARN : Log4jTest.java:15 - 워닝!!
+[2020-06-19 09:51:36] ERROR: Log4jTest.java:16 - 에러!!
+[2020-06-19 09:51:36] FATAL: Log4jTest.java:17 - 파탈에러!!
+[2020-06-19 10:02:53] DEBUG: Log4jTest.java:13 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
+[2020-06-19 10:02:53] INFO : Log4jTest.java:14 - 인포!!
+[2020-06-19 10:02:53] WARN : Log4jTest.java:15 - 워닝!!
+[2020-06-19 10:02:53] ERROR: Log4jTest.java:16 - 에러!!
+[2020-06-19 10:02:53] FATAL: Log4jTest.java:17 - 파탈에러!!
+[2020-06-19 10:09:17] DEBUG: Log4jTest.java:13 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
+[2020-06-19 10:09:17] INFO : Log4jTest.java:14 - 인포!!
+[2020-06-19 10:09:17] WARN : Log4jTest.java:15 - 워닝!!
+[2020-06-19 10:09:17] ERROR: Log4jTest.java:16 - 에러!!
+[2020-06-19 10:09:17] FATAL: Log4jTest.java:17 - 파탈에러!!
+[2020-06-19 10:14:28] DEBUG: Log4jTest.java:13 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
+[2020-06-19 10:14:28] INFO : Log4jTest.java:14 - 인포!!
+[2020-06-19 10:14:28] WARN : Log4jTest.java:15 - 워닝!!
+[2020-06-19 10:14:28] ERROR: Log4jTest.java:16 - 에러!!
+[2020-06-19 10:14:28] FATAL: Log4jTest.java:17 - 파탈에러!!
+[2020-06-19 10:21:40] DEBUG: Log4jTest.java:14 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는000-111-2222]
+[2020-06-19 10:21:40] INFO : Log4jTest.java:15 - 인포!!
+[2020-06-19 10:21:40] WARN : Log4jTest.java:16 - 워닝!!
+[2020-06-19 10:21:40] ERROR: Log4jTest.java:17 - 에러!!
+[2020-06-19 10:21:40] FATAL: Log4jTest.java:18 - 파탈에러!!
+[2020-06-19 10:33:12] DEBUG: Log4jTest.java:14 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는000-111-2222]
+[2020-06-19 10:33:12] INFO : Log4jTest.java:15 - 인포!!
+[2020-06-19 10:33:12] WARN : Log4jTest.java:16 - 워닝!!
+[2020-06-19 10:33:12] ERROR: Log4jTest.java:17 - 에러!!
+[2020-06-19 10:33:12] FATAL: Log4jTest.java:18 - 파탈에러!!
+[2020-06-19 11:28:37] INFO : Log4jTest.java:19 - test라는 메서드를 사용한 PC의 아이피는 : jihwan-PC/192.168.56.1
+[2020-06-19 11:28:37] DEBUG: Log4jTest.java:25 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
+[2020-06-19 11:28:37] INFO : Log4jTest.java:26 - 인포!!
+[2020-06-19 11:28:37] WARN : Log4jTest.java:27 - 워닝!!
+[2020-06-19 11:28:37] ERROR: Log4jTest.java:28 - 에러!!
+[2020-06-19 11:28:37] FATAL: Log4jTest.java:29 - 파탈에러!!
+[2020-06-19 11:30:03] INFO : Log4jTest.java:19 - test라는 메서드를 사용한 PC의 아이피는 : 192.168.56.1
+[2020-06-19 11:30:03] DEBUG: Log4jTest.java:25 - 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
+[2020-06-19 11:30:03] INFO : Log4jTest.java:26 - 인포!!
+[2020-06-19 11:30:03] WARN : Log4jTest.java:27 - 워닝!!
+[2020-06-19 11:30:03] ERROR: Log4jTest.java:28 - 에러!!
+[2020-06-19 11:30:03] FATAL: Log4jTest.java:29 - 파탈에러!!
+[2020-06-19 16:34:25] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-19 16:34:25] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@32d992b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@215be6bb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4439f31e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5dfcfece, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23ceabc1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d5eef3d]
+[2020-06-19 16:34:25] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-19 16:34:26] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-19 16:34:26] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:34:26 KST 2020]; root of context hierarchy
+[2020-06-19 16:34:26] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/work],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.work(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/contactus],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.contactus(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/blog],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.blog(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/weare],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.weare(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLtest],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLtest(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:34:26] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:34:26 KST 2020]; root of context hierarchy
+[2020-06-19 16:34:26] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:34:26 KST 2020]; root of context hierarchy
+[2020-06-19 16:34:26] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-19 16:34:26] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-19 16:34:26] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-19 16:34:27] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 10 ms.
+[2020-06-19 16:34:27] INFO : AbstractApplicationContext.java:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:34:26 KST 2020]; root of context hierarchy
+[2020-06-19 16:34:27] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-19 16:36:32] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-19 16:36:32] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@32d992b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@215be6bb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4439f31e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5dfcfece, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23ceabc1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d5eef3d]
+[2020-06-19 16:36:32] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-19 16:36:33] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-19 16:36:33] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:36:33 KST 2020]; root of context hierarchy
+[2020-06-19 16:36:33] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/work],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.work(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/contactus],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.contactus(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/blog],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.blog(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/weare],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.weare(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLtest],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLtest(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 16:36:33] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:36:33 KST 2020]; root of context hierarchy
+[2020-06-19 16:36:33] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:36:33 KST 2020]; root of context hierarchy
+[2020-06-19 16:36:33] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-19 16:36:33] INFO : EmbeddedDatabaseFactory.java:185 - Starting embedded database: url='jdbc:hsqldb:mem:dataSource', username='sa'
+[2020-06-19 16:36:34] INFO : ScriptUtils.java:443 - Executing SQL script from class path resource [db/edu_hsql.sql]
+[2020-06-19 16:36:34] INFO : ScriptUtils.java:509 - Executed SQL script from class path resource [db/edu_hsql.sql] in 11 ms.
+[2020-06-19 16:36:34] INFO : AbstractApplicationContext.java:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@3abbfa04: startup date [Fri Jun 19 16:36:33 KST 2020]; root of context hierarchy
+[2020-06-19 16:36:34] INFO : EmbeddedDatabaseFactory.java:216 - Shutting down embedded database: url='jdbc:hsqldb:mem:dataSource'
+[2020-06-19 17:07:02] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-19 17:07:02] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@548b7f67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6d78f375, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50c87b21, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5f375618, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1810399e]
+[2020-06-19 17:07:02] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-19 17:07:02] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-19 17:07:02] INFO : DefaultListableBeanFactory.java:826 - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.jdbc.datasource.DriverManagerDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]]
+[2020-06-19 17:07:03] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4dfa3a9d: startup date [Fri Jun 19 17:07:03 KST 2020]; root of context hierarchy
+[2020-06-19 17:07:03] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/work],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.work(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/contactus],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.contactus(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/blog],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.blog(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/weare],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.weare(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLtest],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLtest(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:07:03] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4dfa3a9d: startup date [Fri Jun 19 17:07:03 KST 2020]; root of context hierarchy
+[2020-06-19 17:07:03] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4dfa3a9d: startup date [Fri Jun 19 17:07:03 KST 2020]; root of context hierarchy
+[2020-06-19 17:07:03] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-19 17:07:03] INFO : DriverManagerDataSource.java:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+[2020-06-19 17:07:03] INFO : AbstractApplicationContext.java:984 - Closing org.springframework.web.context.support.GenericWebApplicationContext@4dfa3a9d: startup date [Fri Jun 19 17:07:03 KST 2020]; root of context hierarchy
+[2020-06-19 17:08:59] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-19 17:08:59] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@548b7f67, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6d78f375, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50c87b21, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5f375618, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1810399e]
+[2020-06-19 17:08:59] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-19 17:09:00] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-19 17:09:00] INFO : DefaultListableBeanFactory.java:826 - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.jdbc.datasource.DriverManagerDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]]
+[2020-06-19 17:09:00] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4dfa3a9d: startup date [Fri Jun 19 17:09:00 KST 2020]; root of context hierarchy
+[2020-06-19 17:09:00] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/work],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.work(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/contactus],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.contactus(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/blog],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.blog(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/weare],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.weare(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLtest],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLtest(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:00] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4dfa3a9d: startup date [Fri Jun 19 17:09:00 KST 2020]; root of context hierarchy
+[2020-06-19 17:09:00] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4dfa3a9d: startup date [Fri Jun 19 17:09:00 KST 2020]; root of context hierarchy
+[2020-06-19 17:09:00] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-19 17:09:01] WARN : AbstractApplicationContext.java:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.NoClassDefFoundError: Unable to find Log4j2 as default logging library. Please provide a logging library and configure a valid spyLogDelegator name in the properties file.
+[2020-06-19 17:09:01] ERROR: TestContextManager.java:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@548b7f67] to prepare test instance [org.edu.test.DataSourceTest@239105a8]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.NoClassDefFoundError: Unable to find Log4j2 as default logging library. Please provide a logging library and configure a valid spyLogDelegator name in the properties file.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1281)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:130)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.NoClassDefFoundError: Unable to find Log4j2 as default logging library. Please provide a logging library and configure a valid spyLogDelegator name in the properties file.
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1567)
+	... 41 more
+[2020-06-19 17:09:01] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-19 17:09:01] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]
+[2020-06-19 17:09:01] INFO : DefaultListableBeanFactory.java:826 - Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] with [Generic bean: class [org.springframework.jdbc.datasource.DriverManagerDataSource]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]]
+[2020-06-19 17:09:01] INFO : AbstractApplicationContext.java:583 - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@495ee280: startup date [Fri Jun 19 17:09:01 KST 2020]; root of context hierarchy
+[2020-06-19 17:09:01] INFO : AutowiredAnnotationBeanPostProcessor.java:155 - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.home(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/work],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.work(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/slide],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.slide(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/contactus],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.contactus(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/blog],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.blog(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/weare],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.weare(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/HTMLtest],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLtest(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : AbstractHandlerMethodMapping.java:544 - Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+[2020-06-19 17:09:01] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@495ee280: startup date [Fri Jun 19 17:09:01 KST 2020]; root of context hierarchy
+[2020-06-19 17:09:01] INFO : RequestMappingHandlerAdapter.java:556 - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@495ee280: startup date [Fri Jun 19 17:09:01 KST 2020]; root of context hierarchy
+[2020-06-19 17:09:01] INFO : AbstractUrlHandlerMapping.java:362 - Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+[2020-06-19 17:09:01] WARN : AbstractApplicationContext.java:551 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+[2020-06-19 17:09:01] ERROR: TestContextManager.java:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@548b7f67] to prepare test instance [org.edu.test.DataSourceTest@1b8a29df]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\root-context.xml]: Error setting property values; nested exception is org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1281)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:551)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:481)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:312)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:308)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:543)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:130)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.springframework.beans.PropertyBatchUpdateException; nested PropertyAccessExceptions (1) are:
+PropertyAccessException 1: org.springframework.beans.MethodInvocationException: Property 'driverClassName' threw exception; nested exception is java.lang.NoClassDefFoundError: Could not initialize class net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:121)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1567)
+	... 41 more
+[2020-06-19 17:14:42] INFO : AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[2020-06-19 17:14:42] INFO : AbstractTestContextBootstrapper.java:174 - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@32d992b2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@215be6bb, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@4439f31e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5dfcfece, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23ceabc1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5d5eef3d]
+[2020-06-19 17:14:42] INFO : XmlBeanDefinitionReader.java:317 - Loading XML bean definitions from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml]
+[2020-06-19 17:14:55] WARN : SimpleSaxErrorHandler.java:48 - Ignored XML validation warning
+org.xml.sax.SAXParseException; lineNumber: 8; columnNumber: 117; schema_reference.4: 스키마 문서 'https://www.springframework.org/schema/beans/spring-beans.xsd' 읽기를 실패했습니다. 원인: 1) 문서를 찾을 수 없습니다. 2) 문서를 읽을 수 없습니다. 3) 문서의 루트 요소가 <xsd:schema>가 아닙니다.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.warning(ErrorHandlerWrapper.java:99)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:392)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:306)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4158)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaWarning(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2491)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2193)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:578)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:610)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.findSchemaGrammar(XMLSchemaValidator.java:2447)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1768)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:741)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:374)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:613)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252)
+	at org.springframework.test.context.web.GenericXmlWebContextLoader.loadBeanDefinitions(GenericXmlWebContextLoader.java:47)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:127)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: java.net.UnknownHostException: www.springframework.org
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:666)
+	at sun.security.ssl.BaseSSLSocketImpl.connect(BaseSSLSocketImpl.java:173)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:180)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1156)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1050)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1564)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1492)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:263)
+	at com.sun.org.apache.xerces.internal.impl.XMLEntityManager.setupCurrentEntity(XMLEntityManager.java:647)
+	at com.sun.org.apache.xerces.internal.impl.XMLVersionDetector.determineDocVersion(XMLVersionDetector.java:148)
+	at com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaParsingConfig.parse(SchemaParsingConfig.java:583)
+	at com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaParsingConfig.parse(SchemaParsingConfig.java:686)
+	at com.sun.org.apache.xerces.internal.impl.xs.opti.SchemaDOMParser.parse(SchemaDOMParser.java:530)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2181)
+	... 58 more
+[2020-06-19 17:14:55] ERROR: TestContextManager.java:234 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@32d992b2] to prepare test instance [org.edu.test.DataSourceTest@543788f3]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:538)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:760)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:460)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:206)
+Caused by: org.springframework.beans.factory.xml.XmlBeanDefinitionStoreException: Line 8 in XML document from file [C:\egov\workspace\jang03\src\main\webapp\WEB-INF\spring\appServlet\servlet-context.xml] is invalid; nested exception is org.xml.sax.SAXParseException; lineNumber: 8; columnNumber: 117; cvc-elt.1: 'beans:beans' 요소의 선언을 찾을 수 없습니다.
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:399)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:336)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:181)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:217)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:188)
+	at org.springframework.beans.factory.support.AbstractBeanDefinitionReader.loadBeanDefinitions(AbstractBeanDefinitionReader.java:252)
+	at org.springframework.test.context.web.GenericXmlWebContextLoader.loadBeanDefinitions(GenericXmlWebContextLoader.java:47)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:127)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:281)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:249)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: org.xml.sax.SAXParseException; lineNumber: 8; columnNumber: 117; cvc-elt.1: 'beans:beans' 요소의 선언을 찾을 수 없습니다.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:1901)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.startElement(XMLSchemaValidator.java:741)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:374)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl$NSContentDriver.scanRootElementHook(XMLNSDocumentScannerImpl.java:613)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3132)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:852)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:243)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at org.springframework.beans.factory.xml.DefaultDocumentLoader.loadDocument(DefaultDocumentLoader.java:76)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadDocument(XmlBeanDefinitionReader.java:429)
+	at org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions(XmlBeanDefinitionReader.java:391)
+	... 38 more

@@ -10,7 +10,24 @@
 		</layout>
 	</appender>
 	
+	<!-- 파일에 로그 찍기! -->
+    <appender name="fileLogger" class="org.apache.log4j.RollingFileAppender">
+        <!-- 로그 파일 생성위치 -->
+        <param name="file" value="./spring.Log"/>
+        <param name="Append" value="true"/>
+        <!-- 로그 파일 하나당 사이즈 1m -->
+		<param name="MaxFileSize" value="1000kb" />
+		<!-- 로그파일 최대 생성갯수 3개가 넘으면 지워짐 -->
+		<param name="MaxBackupIndex" value="3" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}] %-5p: %F:%L - %m%n" />
+        </layout>
+    </appender>
+	
 	<!-- Application Loggers -->
+	<logger name = "kr.or.test">
+		<level value = "debug"/>
+	</logger>
 	<logger name="org.edu.controller">
 		<level value="info" />
 	</logger>
@@ -36,6 +53,7 @@
 	<root>
 		<priority value="info" />
 		<appender-ref ref="console" />
+		<appender-ref ref="fileLogger" />
 	</root>
 	
 </log4j:configuration>
