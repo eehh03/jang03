@@ -1,0 +1,11 @@
+2020-06-22 10:42:46,924 ERROR [kr.or.test.Log4jTest] 에러!!
+2020-06-22 10:42:46,924 FATAL [kr.or.test.Log4jTest] 파탈에러!!
+2020-06-22 10:42:50,746  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
+2020-06-22 10:42:50,762  INFO [kr.or.test.Log4jTest] test라는 메서드를 사용한 PC의 아이피는 : 192.168.56.1
+2020-06-22 10:42:50,762 DEBUG [kr.or.test.Log4jTest] 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
+2020-06-22 10:42:50,762  INFO [kr.or.test.Log4jTest] 인포!!
+2020-06-22 10:42:50,762  WARN [kr.or.test.Log4jTest] 워닝!!
+2020-06-22 10:42:50,762 ERROR [kr.or.test.Log4jTest] 에러!!
+2020-06-22 10:42:50,762 FATAL [kr.or.test.Log4jTest] 파탈에러!!
+2020-06-22 10:42:53,897  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
+2020-06-22 10:42:53,913  INFO [kr.or.test.Log4jTest] test라는 메서드를 사용한 PC의 아이피는 : 192.168.56.1
