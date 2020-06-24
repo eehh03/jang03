@@ -9,7 +9,7 @@ import java.net.URL;
 import java.util.Calendar;
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-
+//200622 아마도
 public class OpenApi {
 	//외부연계 매서드
 	public static void serviceApi() {
@@ -40,7 +40,6 @@ public class OpenApi {
 		//콘솔에 현재 시간 출력
 				Calendar cal = Calendar.getInstance();
 				System.out.println(cal.getTime());
-		
 	}
 
 	public static void main(String[] args) {

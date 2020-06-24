@@ -1,11 +1,4 @@
-2020-06-22 10:42:46,924 ERROR [kr.or.test.Log4jTest] 에러!!
-2020-06-22 10:42:46,924 FATAL [kr.or.test.Log4jTest] 파탈에러!!
-2020-06-22 10:42:50,746  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
-2020-06-22 10:42:50,762  INFO [kr.or.test.Log4jTest] test라는 메서드를 사용한 PC의 아이피는 : 192.168.56.1
-2020-06-22 10:42:50,762 DEBUG [kr.or.test.Log4jTest] 디버그!!MemberVO클래스 [이름은홍길동, 나이는24, 전화번호는null]
-2020-06-22 10:42:50,762  INFO [kr.or.test.Log4jTest] 인포!!
-2020-06-22 10:42:50,762  WARN [kr.or.test.Log4jTest] 워닝!!
-2020-06-22 10:42:50,762 ERROR [kr.or.test.Log4jTest] 에러!!
-2020-06-22 10:42:50,762 FATAL [kr.or.test.Log4jTest] 파탈에러!!
-2020-06-22 10:42:53,897  WARN [org.apache.log4j.joran.action.PriorityAction] Priority element has been deprecated, please use <level> instead.
-2020-06-22 10:42:53,913  INFO [kr.or.test.Log4jTest] test라는 메서드를 사용한 PC의 아이피는 : 192.168.56.1
+2020-06-24 15:01:17,492  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/HTMLtest],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.HTMLtest(java.util.Locale,org.springframework.ui.Model)
+2020-06-24 15:01:17,493  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping] Mapped "{[/sample/],methods=[GET]}" onto public java.lang.String org.edu.controller.HomeController.sample(java.util.Locale,org.springframework.ui.Model)
+2020-06-24 15:01:17,550  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@cd2dae5: startup date [Wed Jun 24 15:01:17 KST 2020]; root of context hierarchy
+2020-06-24 15:01:17,580  INFO [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter] Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@cd2dae5: startup date [Wed Jun 24 15:01:17 KST 2020]; root of context hierarchy
