@@ -16,27 +16,40 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 </head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
 
-  <!-- Navbar -->
+<body>
+  
+  
+   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
       <li class="nav-item">
-    
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
     </ul>
 
+    <!-- SEARCH FORM -->
+    <form class="form-inline ml-3">
+      <div class="input-group input-group-sm">
+        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-navbar" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-    <li class="nav-item">
-    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i
-    class="fas fa-th-large"></i></a> <!-- 상단 오른쪽 바둑이 -->
-  </li>
-  </ul>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button"><i
+            class="fas fa-th-large"></i></a>
+      </li>
+    </ul>
   </nav>
+  <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -56,27 +69,15 @@
         </div>
         <div class="info">
           <a href="#" class="d-block">User02
-          <span class="right badge badge-danger">Online</span>
-          </a>
+           <span class="right badge badge-danger">Online</span>
+           </a>
         </div>
       </div>
-      
-         <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-    
-           <!-- Sidebar Menu -->
+
+      <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-           <li class="nav-item">
+          <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>사용자 홈</p>
@@ -85,8 +86,7 @@
           <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                대시보드
+              <p>Dashboard
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -94,125 +94,151 @@
               <li class="nav-item">
                 <a href="#" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>관리자관리</p>
+                  <p>관리자 관리</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>게시물관리</p>
+                  <p>게시물 관리</p>
                 </a>
               </li>
             </ul>
           </li>
-         
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
-
-  <!-- Content Wrapper. Contains page content -->
+  
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
+  
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Starter Page</h1>
+            <h1 class="m-0 text-dark">DashBoard Management</h1> 
           </div><!-- /.col -->
+          
           <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Starter Page</li>
-            </ol>
+          <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active"><a href="#">forms</a></li>
+          <li class="breadcrumb-item active">General Element</li>
+          </ol>
+          </div><!-- /.col -->
+<!-- 200622 -->
 
-            
-          </div><!-- /.col -->
-        </div><!-- /.row -->
+                <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">게시판 검색</h3>
+                </div>
+                </div>
+                </div>
+                <div class="col-1" style="display:inline-block" >
+                        <select class="form-control">
+                          <option>--</option>
+                        </select>
+                        </div>
+                        <div class="search" style="display:inline">
+     <input type="text" placeholder="">
+<div class="button" style="display:inline">
+     <button>검색</button>
+</div>
+<div class="button" style="display:inline">
+     <button>새글쓰기</button>
+     </div>
+ </div>
+</div>
+			
+           
         <!--  여기부터 -->
         
          <div class="row">
           <div class="col-12">
+           
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Responsive Hover Table</h3>
-
-                <div class="card-tools">
-                  <div class="input-group input-group-sm" style="width: 150px;">
-                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-
-                    <div class="input-group-append">
-                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
-                    </div>
-                  </div>
-                </div>
+                <h3 class="card-title">LIST ALL PAGE</h3>
+                <div class="input-group-append"> 
+               </div>
               </div>
+             
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                      <th>Reason</th>
+                      <th>BNO</th>
+                      <th>TITLE</th>
+                      <th>VIEWCNT</th>
+                      <th>REGDATE</th>
+                      <th>VIEWCNT</th>
                     </tr>
                   </thead>
+                 
                   <tbody>
                     <tr>
                       <td>183</td>
+                       <td>홈페이지 오픈 테스트</td>
                       <td>John Doe</td>
                       <td>11-7-2014</td>
-                      <td><span class="tag tag-success">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">0</span></td>
+                      
+                      
                     </tr>
                     <tr>
                       <td>219</td>
+                       <td>새로운 글을 넣습니다</td>
                       <td>Alexander Pierce</td>
                       <td>11-7-2014</td>
-                      <td><span class="tag tag-warning">Pending</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">3</span></td>
                     </tr>
                     <tr>
                       <td>657</td>
+                      <td>새로운 글을 넣습니다</td>
                       <td>Bob Doe</td>
                       <td>11-7-2014</td>
-                      <td><span class="tag tag-primary">Approved</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">0</span></td>
                     </tr>
                     <tr>
                       <td>175</td>
+                      <td>새로운 글을 넣습니다</td>
                       <td>Mike Doe</td>
                       <td>11-7-2014</td>
-                      <td><span class="tag tag-danger">Denied</span></td>
-                      <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
+                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">1</span></td>
                     </tr>
                   </tbody>
                 </table>
-              </div>
-              <!-- /.card-body -->
+              </div> <!-- /.card-body -->
+              
             </div>
             <!-- /.card -->
           </div>
-        </div>
-         
-          <!-- 여기까지 만들 -->
-            
-            
-        
-      </div><!-- /.container-fluid -->
-    </div>
     <!-- /.content-header -->
-    <div class="content">
+<div class="content">
+<td>
+<button type="submit" class="btn btn btn-warning btn-lg">CREATE</button>
+</td>
+ </div>
+</div> 						
 
-    </div>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+</div> 	
+</div>
+</div>
+<div style="text-align:center;">
+ <button type="button" class="btn btn-info" >1</button>
+ </div>	
+ 
 
+ <!-- Main content -->  
+	<div class="content">
+	
+	</div>
+	<!-- .content  -->
+</div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -222,7 +248,6 @@
       <button type="button" class="btn btn-primary btn-lg btn-block">로그아웃</button>
     </div>
   </aside>
-  
   <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
@@ -234,7 +259,8 @@
     <!-- Default to the left -->
     <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
-
+</div>
+<!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
 
