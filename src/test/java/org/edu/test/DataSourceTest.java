@@ -2,10 +2,13 @@ package org.edu.test;
 
 
 import java.sql.Connection;
+import java.util.List;
 
 import javax.inject.Inject;
 import javax.sql.DataSource;
 
+import org.edu.service.IF_MemberService;
+import org.edu.vo.MemberVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -26,8 +29,60 @@ public class DataSourceTest {
 		System.out.println("데이터베이스 커넥션 성공" + con);
 		
 	}
+	//200625
 	@Test
-	public void test() {
-	
+	public void testDeleteMember() throws Exception{
+		memberService.deleteMember("user02");
 	}
+	
+	@Test
+	public void testUpdateMember() throws Exception{
+		MemberVO memberVO = new MemberVO();
+		memberVO.setUser_id("user02");
+		memberVO.setUser_pw("1234");
+		memberVO.setUser_name("장은화");
+		memberVO.setEmail("eun@test.com");
+		memberVO.setPoint(100);
+		memberVO.setEnabled(true);
+		memberVO.setLevels("ROLE_ADMIN");//스프링 시큐리티와 연동해서 쓸거
+		memberService.updateMember(memberVO);
+		
+	}
+	
+	
+			@Test
+			public void testInsertMember() throws Exception{
+				MemberVO memberVO = new MemberVO();
+				memberVO.setUser_id("jangeunhwa");
+				memberVO.setUser_pw("1234");
+				memberVO.setUser_name("장은화");
+				memberVO.setEmail("eun@test.com");
+				memberVO.setPoint(100);
+				memberVO.setEnabled(true);
+				memberVO.setLevels("ROLE_USER");//스프링 시큐리티와 연동해서 쓸거
+				memberService.inserMember(memberVO);
+				
+			}
+	
+	//200624
+	@Inject
+	private IF_MemberService memberService;
+	
+	@Test
+	//public void test() {
+	public void testSelectMember() throws Exception{
+		System.out.println("회원리스트 입니다");
+		memberService.selectMember();
+		/*List<MemberVO> list = memberService.selectMember();//MemberVO는 org.edu.vo로 import해야
+		for(MemberVO vo:list ) {//vo로 받는데 list라는 변수에서 받음
+		System.out.println("사용자아이디 : " + vo.getUser_id());
+		System.out.println("사용자이메일:" + vo.getEmail());
+		}
+		//System.out.println(memberService.selectMember());	 */	
+	}
+	
+	
+		
+		
 }
+
