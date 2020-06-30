@@ -34,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	writer = #{writer},
  	update_date = now(),
  	view_count = #{view_count},
- 	reply_count = #{reply_count},
+ 	reply_count = #{reply_count}
  	where bno = #{bno}
  	</update> 
  	

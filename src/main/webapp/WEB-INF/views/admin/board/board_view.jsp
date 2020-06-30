@@ -58,7 +58,7 @@
 										</div>
 									</div>
 									<div class="buttons">
-										<button type="submit" class="btn btn-warning">UPDATE</button>
+										<a href="/admin/board/update?bno=${boardVO.bno}" class="btn btn-warning">UPDATE</a>
 										<button type="submit" class="btn btn-danger">DELETE</button>
 										<a href="/admin/board/list" class="btn btn-primary">LIST ALL</a>
 									</div>

@@ -27,7 +27,7 @@
 					<!-- general form elements disabled -->
 					<div class="card card-warning">
 						<div class="card-header">
-							<h3 class="card-title">회원등록</h3>
+							<h3 class="card-title">회원수정</h3>
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
@@ -38,7 +38,7 @@
 										<div class="form-group">
 											<label>user_id</label> 
 											<br>${memberVO.user_id}
-											<input value="${memberVO.user_id}" name="user_id" type="hidden" class="form-control"
+											<input name="user_id" value="${memberVO.user_id}"  type="hidden" class="form-control"
 												placeholder="Enter user_id">
 										</div>
 									</div>

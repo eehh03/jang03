@@ -2,7 +2,11 @@
     pageEncoding="UTF-8"%>
    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <%@ include file="../include/header.jsp" %>
-
+<script> 
+if('${msg}' == "success"){
+	alert("수정에 성공하였습니다!");
+	} //업데이트 성공시 나옴.200630
+</script>
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
@@ -75,7 +79,7 @@
 									<div class="form-group">
                        </div>
                      <div class = "buttons">
-									<button type="submit" class="btn btn-warning">UPDATE</button>
+									<a href="/admin/member/update?user_id=${memberVO.user_id}" class="btn btn-warning">UPDATE</a>
 									<button type="submit" class="btn btn-danger">DELETE</button>
 									<a href="/admin/member/list" class="btn btn-primary">LIST ALL</a>
 								</div>
