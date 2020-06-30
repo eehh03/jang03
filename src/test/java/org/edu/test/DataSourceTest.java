@@ -81,8 +81,5 @@ public class DataSourceTest {
 		//System.out.println(memberService.selectMember());	 */	
 	}
 	
-	
-		
-		
 }
 

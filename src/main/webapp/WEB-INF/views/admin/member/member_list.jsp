@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <%@ include file="../include/header.jsp" %>
+
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -74,16 +76,18 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td>user02</td>
-                      <td>user02[0]</td>
-                      <td>user02@edu.com</td>
-                      <td><span class="tag tag-success">true</span></td>
-                      <td>2019-10-15 10:41</td>
-                      <td><small class="badge badge-danger">ROLE_ADMIN</small></td>
+                    <c:forEach items="${memberList}" var="memberVO" varStatus="status">
+  					  <tr>
+                      <td>${memberVO.user_id}</td>
+                      <td><a href="/admin/member/view?user_id=${memberVO.user_id}">${memberVO.user_name}</a></td>
+                      <td>${memberVO.email}</td>
+                      <td><span class="tag tag-success">${memberVO.enabled}</span></td>
+                      <td>${memberVO.reg_date}</td>
+                      <td><small class="badge badge-danger">${memberVO.levels}</small></td>
                     </tr>
+                    </c:forEach>
                   </tbody>
-            <td> <button type="submit" class="btn btn-primary">CREATE</button>
+            <td> <a href="/admin/member/write" class="btn btn-primary">CREATE</a>
                </td>
            <td>
               <nav aria-label="Contacts Page Navigation">
@@ -98,8 +102,6 @@
             </div>
             <!-- /.card -->
           </div>
- 
-    
     </div>
     <!-- /.content-header -->
 <%@ include file="../include/footer.jsp" %>

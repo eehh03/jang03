@@ -1,5 +1,3 @@
-<!-- starter.jsp에서 가져옴 -->
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>AdminLTE 3 | 관리자 화면</title>
+  <title>AdminLTE 3 | 관리자화면</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
@@ -16,11 +14,10 @@
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
 </head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
 
-<body>
-  
-  
-   <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -111,26 +108,25 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-  
+
+  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-  
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">DashBoard Management</h1> 
+            <h1 class="m-0 text-dark">DashBoard Management</h1>
           </div><!-- /.col -->
-          
           <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
-          <li class="breadcrumb-item active"><a href="#">forms</a></li>
-          <li class="breadcrumb-item active">General Element</li>
-          </ol>
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Starter Page</li>
+            </ol>
           </div><!-- /.col -->
-<!-- 200622 -->
-
-                <div class="col-12">
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+      <div class="col-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">게시판 검색</h3>
@@ -150,22 +146,24 @@
 <div class="button" style="display:inline">
      <button>새글쓰기</button>
      </div>
- </div>
+                        </div>
+    
 </div>
-			
-           
-        <!--  여기부터 -->
-        
-         <div class="row">
-          <div class="col-12">
-           
+        <div class="col-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">LIST ALL PAGE</h3>
-                <div class="input-group-append"> 
-               </div>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default"><i class="fas fa-search"></i></button>
+                    </div>
+                  </div>
+                </div>
               </div>
-             
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
                 <table class="table table-hover text-nowrap">
@@ -173,72 +171,68 @@
                     <tr>
                       <th>BNO</th>
                       <th>TITLE</th>
-                      <th>VIEWCNT</th>
+                      <th>WRITE</th>
                       <th>REGDATE</th>
                       <th>VIEWCNT</th>
                     </tr>
                   </thead>
-                 
                   <tbody>
                     <tr>
-                      <td>183</td>
-                       <td>홈페이지 오픈 테스트</td>
-                      <td>John Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">0</span></td>
-                      
-                      
+                      <td>130</td>
+                      <td>홈페이지 오픈 테스트</td>
+                      <td>kim ilguk</td>
+                      <td><span class="tag tag-success">2019-10-19 08:58</span></td>
+                      <td><span class="badge badge-danger right">1</span></td>
                     </tr>
                     <tr>
-                      <td>219</td>
-                       <td>새로운 글을 넣습니다</td>
-                      <td>Alexander Pierce</td>
-                      <td>11-7-2014</td>
-                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">3</span></td>
+                      <td>124</td>
+                      <td>새로운 글을 넣습니다.</td>
+                      <td>user00</td>
+                      <td><span class="tag tag-warning">2019-10-19 08:58</span></td>
+                      <td><span class="badge badge-danger right">0</span></td>
                     </tr>
                     <tr>
-                      <td>657</td>
-                      <td>새로운 글을 넣습니다</td>
-                      <td>Bob Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">0</span></td>
+                      <td>123</td>
+                      <td>새로운 글을 넣습니다.</td>
+                      <td>user00</td>
+                      <td><span class="tag tag-primary">2019-10-19 08:58</span></td>
+                      <td><span class="badge badge-danger right">0</span></td>
                     </tr>
                     <tr>
-                      <td>175</td>
-                      <td>새로운 글을 넣습니다</td>
-                      <td>Mike Doe</td>
-                      <td>11-7-2014</td>
-                      <td><span data-toggle="tooltip" title="" class="badge bg-yellow" data-original-title="3 New Messages">1</span></td>
-                    </tr>
+                      <td>122</td>
+                      <td>새로운 글을 넣습니다.</td>
+                      <td>user00</td>
+                      <td><span class="tag tag-danger">2019-10-19 08:58</span></td>
+                      <td><span class="badge badge-danger right">0</span></td>
+                      </tr>
                   </tbody>
+            <td> <button type="submit" class="btn btn-primary">CREATE</button>
+               </td>
+           <td>
+              <nav aria-label="Contacts Page Navigation">
+            <ul class="pagination justify-content-center m-0">
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            </ul>
+          </nav>
+               </td>
                 </table>
-              </div> <!-- /.card-body -->
-              
+              </div>
+              <!-- /.card-body -->
             </div>
             <!-- /.card -->
           </div>
-    <!-- /.content-header -->
-<div class="content">
-<td>
-<button type="submit" class="btn btn btn-warning btn-lg">CREATE</button>
-</td>
- </div>
-</div> 						
-
-</div> 	
-</div>
-</div>
-<div style="text-align:center;">
- <button type="button" class="btn btn-info" >1</button>
- </div>	
  
+    
+    </div>
+    <!-- ./Content Wrapper. Contains page content -->
 
- <!-- Main content -->  
+  <!-- Main content -->  
 	<div class="content">
-	
+
 	</div>
 	<!-- .content  -->
-</div>
+
+
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -259,6 +253,7 @@
     <!-- Default to the left -->
     <strong>Copyright &copy; 2014-2020 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
   </footer>
+
 </div>
 <!-- ./wrapper -->
 
@@ -270,5 +265,6 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+
 </body>
 </html>

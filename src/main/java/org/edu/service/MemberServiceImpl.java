@@ -15,7 +15,7 @@ public class MemberServiceImpl implements IF_MemberService {
 	private IF_MemberDAO memberDAO;
 	
 	@Override
-	public void inserMember(MemberVO memberVO) throws Exception {
+	public void insertMember(MemberVO memberVO) throws Exception {
 		memberDAO.insertMember(memberVO);
 		
 	}
@@ -36,6 +36,11 @@ public class MemberServiceImpl implements IF_MemberService {
 	public void deleteMember(String user_id) throws Exception {
 		memberDAO.deleteMember(user_id);
 		
+	}
+
+	@Override
+	public MemberVO viewMember(String user_id) throws Exception {
+		return memberDAO.viewMember(user_id);
 	}
 
 }

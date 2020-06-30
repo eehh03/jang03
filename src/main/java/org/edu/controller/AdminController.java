@@ -1,24 +1,91 @@
 package org.edu.controller;
 
+import java.util.List;
 import java.util.Locale;
 
+import javax.inject.Inject;
+
+import org.edu.service.IF_BoardService;
+import org.edu.service.IF_MemberService;
+import org.edu.vo.BoardVO;
+import org.edu.vo.MemberVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 public class AdminController {
 	
-	/** 게시물관리 리스트 입니다.	*/
+	@Inject
+	private IF_BoardService boardService;
+	
+	@Inject //멤버서비스에서 인젝트할거라
+	private IF_MemberService memberService;
+	
+	/** 게시물관리 리스트 입니다.	
+	 * @throws Exception */
 	@RequestMapping(value = "/admin/board/list", method = RequestMethod.GET)
-	public String boardList(Locale locale, Model model) {
-		return "admin/board/list";
+	public String boardList(Locale locale, Model model) throws Exception {
+		List<BoardVO> list = boardService.selectBoard();
+		model.addAttribute("boardList", list);
+		return "admin/board/board_list";
 	}
 	
-	/** 회원관리 리스트 입니다.	*/
+	/** 게시물관리 상세보기 입니다.200629
+	 * @throws Exception */
+	@RequestMapping(value = "/admin/board/view", method = RequestMethod.GET)
+	public String boardView(@RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {
+		BoardVO boardVO = boardService.viewBoard(bno);//위에 Inject
+		model.addAttribute("boardVO", boardVO);//앞에는 jsp에서 쓸거, 뒤에는 가져온거
+		return "admin/board/board_view";
+	}
+	
+	/** 게시물관리 > 등록 입니다.200630	
+	 * @throws Exception */
+	@RequestMapping(value = "/admin/board/write", method = RequestMethod.GET)
+	public String boardWrite(Locale locale, Model model) throws Exception {	
+		return "admin/board/board_write";
+	}
+	@RequestMapping(value = "/admin/board/write", method = RequestMethod.POST)
+	public String boardWrite(BoardVO boardVO, Locale locale, Model model) throws Exception {	
+		boardService.insertBoard(boardVO);
+		return "redirect:/admin/board/list";
+	}
+	
+	/** 회원관리 리스트 입니다.	
+	 * @throws Exception */
 	@RequestMapping(value = "/admin/member/list", method = RequestMethod.GET)
-	public String memberList(Locale locale, Model model) {
-		return "admin/member/list";
+	public String memberList(Locale locale, Model model) throws Exception {
+		List<MemberVO> list = memberService.selectMember();
+		//모델 클래스로 jsp화면으로 memberService에서 셀렉트한 list값을 memberList변수명으로 보낸다.
+		//model {list영역안에서 -> memberList로 넣어서 -> jsp로 보냄}
+		model.addAttribute("memberList", list);
+		return "admin/member/member_list";
+	}
+	
+	/** 회원관리 상세보기 입니다.200626.9	
+	 * @throws Exception */
+	@RequestMapping(value = "/admin/member/view", method = RequestMethod.GET)
+	public String memberView(@RequestParam("user_id") String user_id, Locale locale, Model model) throws Exception {
+		MemberVO memberVO = memberService.viewMember(user_id);
+		model.addAttribute("memberVO", memberVO);
+		return "admin/member/member_view";
+	}
+	
+	/** 회원관리 > 등록 입니다.200629	
+	 * @throws Exception */
+	@RequestMapping(value = "/admin/member/write", method = RequestMethod.GET)
+	public String memberWrite(Locale locale, Model model) throws Exception {
+		
+		return "admin/member/member_write";
+	}
+	
+	@RequestMapping(value = "/admin/member/write", method = RequestMethod.POST)
+	public String memberWrite(MemberVO memberVO,Locale locale, RedirectAttributes rdat) throws Exception {
+		memberService.insertMember(memberVO);
+		return "redirect:/admin/member/list";
 	}
 	
 	/** 관리자 홈 입니다.	*/
