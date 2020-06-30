@@ -60,7 +60,7 @@ public class DataSourceTest {
 				memberVO.setPoint(100);
 				memberVO.setEnabled(true);
 				memberVO.setLevels("ROLE_USER");//스프링 시큐리티와 연동해서 쓸거
-				memberService.inserMember(memberVO);
+				memberService.insertMember(memberVO);
 				
 			}
 	
