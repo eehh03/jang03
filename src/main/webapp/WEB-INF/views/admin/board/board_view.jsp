@@ -56,6 +56,14 @@
 											<label>Writer</label> <br> ${boardVO.writer}
 										</div>
 									</div>
+									
+									<div class="col-sm-12">
+										<!-- text input -->
+										<div class="form-group">
+											<label>FileDownload</label> <br> ${boardVO.files[0]}
+										</div>
+									</div>
+									
 									<div class="buttons">
 										<a href="/admin/board/update?bno=${boardVO.bno}" class="btn btn-warning">UPDATE</a>
 										<button type="submit" class="btn btn-danger">DELETE</button>

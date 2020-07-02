@@ -41,7 +41,11 @@ public class BoardDAOImpl implements IF_BoardDAO{
 	@Override
 	public void insertAttach(String fullName) throws Exception {
 		sqlSession.insert(mapperQuery+ ".insertAttach", fullName);
-		
-		
 	}
+
+	@Override
+	public String selectAttach(Integer bno) throws Exception {
+		return sqlSession.selectOne(mapperQuery + ".selectAttach", bno);
+	}
+
 }

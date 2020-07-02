@@ -1,8 +1,11 @@
 package org.edu.controller;
 
+import java.io.File;
 import java.util.List;
 import java.util.Locale;
+import java.util.UUID;
 
+import javax.annotation.Resource;
 import javax.inject.Inject;
 
 import org.edu.service.IF_BoardService;
@@ -11,9 +14,11 @@ import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 @Controller
@@ -24,23 +29,13 @@ public class AdminController {
 
    @Inject
    private IF_MemberService memberService;
-
-   /**
-    * 게시물관리 리스트 입니다.
-    * @throws Exception
-    */
-   @RequestMapping(value = "/admin/board/view", method = RequestMethod.GET) 
-   //url은 최대한 짧게
-   public String boardview(@RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {
-      // 모델클래스로 jsp화면으로 boardService에서 셀렉트한 list값을 boardList변수명으로 보낸다.
-      // model { list -> boardList -> jsp }
-      BoardVO boardVO = boardService.viewBoard(bno);
-      model.addAttribute("boardVO", boardVO);
-      return "admin/board/board_view";
-   }
+   
+   //첨부파일 업로드 경로를 변수 값으로 가져옴 servlet-context.xml에 있었음.
+   @Resource(name= "uploadPath")
+   private String uploadPath;
    
    /**
-    * 게시물관리 상세보기 입니다.
+    * 게시물관리 리스트 입니다.
     * @throws Exception
     */
    @RequestMapping(value = "/admin/board/list", method = RequestMethod.GET)
@@ -50,6 +45,31 @@ public class AdminController {
       // model { list -> boardList -> jsp }
       model.addAttribute("boardList", list);
       return "admin/board/board_list";
+   }
+   
+   /**
+    * 게시물관리 상세보기 입니다.
+    * @throws Exception
+    */
+   @RequestMapping(value = "/admin/board/view", method = RequestMethod.GET) 
+   //url은 최대한 짧게
+   public String boardview(@RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {
+      // 모델클래스로 jsp화면으로 boardService에서 셀렉트한 list값을 boardList변수명으로 보낸다.
+      // model { list -> boardList -> jsp }
+	   BoardVO boardVO = boardService.viewBoard(bno);
+	   //여기서부터 첨부파일명 때문에 추가
+     String files = boardService.selectAttach(bno); 
+     /*String[] filenames = {}; 
+      for(String fileName : files) { 
+    	  filenames = new String[] {fileName};//형변환
+			}*/
+     //여러개 파일에서 1개 파일만 받는 것으로 변경
+     String[] filenames = new String[] {files};
+      boardVO.setFiles(filenames);//String[]
+      //넣어야 매개변수 boardVO에 파일목록이 들어가. 
+    //여기까지 첨부파일때문에 추가
+      model.addAttribute("boardVO", boardVO);
+      return "admin/board/board_view";
    }
 
    /**
@@ -61,10 +81,21 @@ public class AdminController {
       return "admin/board/board_write";
    }
    @RequestMapping(value = "/admin/board/write", method = RequestMethod.POST)
-      public String boardWrite(BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {   
-      boardService.insertBoard(boardVO);
-      rdat.addFlashAttribute("msg","입력");
-      return "redirect:/admin/board/list";      
+      public String boardWrite(MultipartFile file, BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {   
+      String orginalName = file.getOriginalFilename();//jsp에서 전송받은 파일의 이름
+      UUID uid = UUID.randomUUID(); //랜덤문자 구하기. 랜덤하게 아이디 만들때 씀.
+      String saveName = uid.toString() + "." + orginalName.split("\\.")[1]; //upload에 uid로 저장
+	  String[] files = new String[] {saveName};//getset으로 하려new String[]으로 형변환. 배열선언이유-BoardVO에 files이라는 변수를 배열로 만들어서. 
+	  boardVO.setFiles(files); //set으로 files저장. 
+	   boardService.insertBoard(boardVO); 
+	  //위는 DB에 첨부파일명을 저장.
+	  
+	  //여기서 부터 실제 파일을 폴더에 저장하기 시작
+	   byte[] fileData = file.getBytes();
+	   File target = new File(uploadPath, saveName);
+	   FileCopyUtils.copy(fileData, target);
+	   rdat.addFlashAttribute("msg","입력");
+	   return "redirect:/admin/board/list";      
    }
    
    /**
@@ -103,7 +134,6 @@ public class AdminController {
       model.addAttribute("memberVO", memberVO);
       return "admin/member/member_view";
    }
-
   
    /**
     * 회원관리 > 등록 입니다. 
