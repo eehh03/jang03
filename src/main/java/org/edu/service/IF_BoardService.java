@@ -10,6 +10,6 @@ public List<BoardVO> selectBoard() throws Exception;
 public void updateBoard(BoardVO boardVO) throws Exception;
 public void deleteBoard(Integer bno) throws Exception;
 public BoardVO viewBoard(Integer bno) throws Exception;
-public String selectAttach(Integer bno) throws Exception;
+public List<String> selectAttach(Integer bno) throws Exception;
 
 }

@@ -60,7 +60,8 @@
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>FileDownload</label> <br> ${boardVO.files[0]}
+											<label>FileDownload</label> <br> 
+											<a href="/download?filename=${boardVO.files[0]}"> ${boardVO.files[0]}</a>
 										</div>
 									</div>
 									

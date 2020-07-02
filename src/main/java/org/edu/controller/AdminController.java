@@ -7,17 +7,20 @@ import java.util.UUID;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletResponse;
 
 import org.edu.service.IF_BoardService;
 import org.edu.service.IF_MemberService;
 import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -33,6 +36,21 @@ public class AdminController {
    //첨부파일 업로드 경로를 변수 값으로 가져옴 servlet-context.xml에 있었음.
    @Resource(name= "uploadPath")
    private String uploadPath;
+   
+   /**
+    * 게시물 상세보기에서 첨부파일 다운로드 메서드 구현
+    * 
+    */
+   @RequestMapping(value="/download", method=RequestMethod.GET) //웹브라우저에서 접근(요쳥)
+   @ResponseBody //접근시 어떤 것을 주라(응답)
+   public FileSystemResource fileDownload(@RequestParam("filename") String fileName, HttpServletResponse response) {
+	  //String으로 받아 fileName으로 쓸거. 응답은 Http~로 응답줄거
+	   File file = new File(uploadPath + "/" + fileName);//uploadPath안 fileName을 잡아오려고
+	   response.setContentType("application/download; utf-8");
+	   response.setHeader("Content-Disposition", "attachment; filename="+fileName);
+	   return new FileSystemResource(file);
+   }
+   
    
    /**
     * 게시물관리 리스트 입니다.
@@ -58,15 +76,14 @@ public class AdminController {
       // model { list -> boardList -> jsp }
 	   BoardVO boardVO = boardService.viewBoard(bno);
 	   //여기서부터 첨부파일명 때문에 추가
-     String files = boardService.selectAttach(bno); 
-     /*String[] filenames = {}; 
+     List<String> files = boardService.selectAttach(bno); 
+     String[] filenames = {}; 
       for(String fileName : files) { 
     	  filenames = new String[] {fileName};//형변환
-			}*/
+			}
      //여러개 파일에서 1개 파일만 받는 것으로 변경
-     String[] filenames = new String[] {files};
-      boardVO.setFiles(filenames);//String[]
-      //넣어야 매개변수 boardVO에 파일목록이 들어가. 
+    // String[] filenames = new String[] {files};
+      boardVO.setFiles(filenames);//String[]. 넣어야 매개변수 boardVO에 파일목록이 들어가. 
     //여기까지 첨부파일때문에 추가
       model.addAttribute("boardVO", boardVO);
       return "admin/board/board_view";
@@ -82,18 +99,23 @@ public class AdminController {
    }
    @RequestMapping(value = "/admin/board/write", method = RequestMethod.POST)
       public String boardWrite(MultipartFile file, BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {   
-      String orginalName = file.getOriginalFilename();//jsp에서 전송받은 파일의 이름
+    if(file.getOriginalFilename() == "") {
+    	//첨부파일 없이 저장
+    	boardService.insertBoard(boardVO); 
+    }else {
+	   // System.out.println("===첨부파일여부없이저장===" + file.getOriginalFilename());
+	    String orginalName = file.getOriginalFilename();//jsp에서 전송받은 파일의 이름
       UUID uid = UUID.randomUUID(); //랜덤문자 구하기. 랜덤하게 아이디 만들때 씀.
       String saveName = uid.toString() + "." + orginalName.split("\\.")[1]; //upload에 uid로 저장
 	  String[] files = new String[] {saveName};//getset으로 하려new String[]으로 형변환. 배열선언이유-BoardVO에 files이라는 변수를 배열로 만들어서. 
 	  boardVO.setFiles(files); //set으로 files저장. 
-	   boardService.insertBoard(boardVO); 
-	  //위는 DB에 첨부파일명을 저장.
-	  
+	   boardService.insertBoard(boardVO); //copy아래가 맞는것같은데 아래두면 에러시 첨부파일이 쌓이게됨.
+	  //위는 DB에 첨부파일명을 저장하기 까지
 	  //여기서 부터 실제 파일을 폴더에 저장하기 시작
 	   byte[] fileData = file.getBytes();
 	   File target = new File(uploadPath, saveName);
 	   FileCopyUtils.copy(fileData, target);
+    }
 	   rdat.addFlashAttribute("msg","입력");
 	   return "redirect:/admin/board/list";      
    }
@@ -105,6 +127,7 @@ public class AdminController {
    @RequestMapping(value = "/admin/board/delete", method = RequestMethod.POST)
       public String boardDelete(@RequestParam("bno") Integer bno, Locale locale, RedirectAttributes rdat) throws Exception {  
 	  boardService.deleteBoard(bno);
+
 	  rdat.addFlashAttribute("msg", "삭제");
 	      return "redirect:/admin/board/list";
    }
