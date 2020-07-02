@@ -31,7 +31,7 @@
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<form role="form" action="/admin/board/write" method="post">
+							<form role="form" action="/admin/board/write" method="post" encType="multipart/form-data">
 								<div class="row">
 									<div class="col-sm-12">
 										<!-- text input -->

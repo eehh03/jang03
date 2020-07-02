@@ -3,7 +3,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <%@ include file="../include/header.jsp" %>
 
-
 		<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
@@ -33,7 +32,7 @@
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<form role="form">
+							<form role="form" action="/admin/board/delete" method="post">
 								<div class="row">
 									<div class="col-sm-12">
 										<!-- text input -->
@@ -63,6 +62,7 @@
 										<a href="/admin/board/list" class="btn btn-primary">LIST ALL</a>
 									</div>
 								</div>
+								<input type="hidden" name="bno" value="${boardVO.bno}">
 
 							</form>
 						</div>

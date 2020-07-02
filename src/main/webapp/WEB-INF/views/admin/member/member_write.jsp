@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="../include/header.jsp" %>
-		<!-- Content Wrapper. Contains page content -->
+
+<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<div class="content-header">
@@ -31,12 +32,13 @@
 						</div>
 						<!-- /.card-header -->
 						<div class="card-body">
-							<form role="form" action="/admin/member/write" method="POST">
+							<form role="form" action="/admin/member/write" method="post">
 								<div class="row">
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>user_id</label> <input name="user_id" type="text" class="form-control"
+											<label>user_id</label> 
+											<input name="user_id" type="text" class="form-control"
 												placeholder="Enter user_id">
 										</div>
 									</div>
@@ -44,7 +46,8 @@
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>user_pw</label> <input name="user_pw" type="text" class="form-control"
+											<label>user_pw</label> 
+											<input name="user_pw" type="text" class="form-control"
 												placeholder="Enter user_pw">
 										</div>
 									</div>
@@ -52,7 +55,8 @@
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>user_name</label> <input name="user_name" type="text" class="form-control"
+											<label>user_name</label> 
+											<input name="user_name" type="text" class="form-control"
 												placeholder="Enter user_name">
 										</div>
 									</div>
@@ -60,13 +64,15 @@
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>email</label> <input name="email" type="text" class="form-control"
+											<label>email</label> 
+											<input name="email" type="text" class="form-control"
 												placeholder="Enter email">
 										</div>
 									</div>
 										<div class="col-sm-12">
 										<div class="form-group">
-											<label>point</label> <input name="point" type="text" class="form-control"
+											<label>point</label> 
+											<input name="point" type="text" class="form-control"
 												placeholder="0">
 										</div>
 									</div>
@@ -84,7 +90,7 @@
                      <br>
                      <div class = "buttons">
 									<button type="submit" class="btn btn-warning">Submit</button>
-									<a href= "/admin/member/list" class="btn btn-primary">LIST ALL</a>
+									<a href="/admin/member/list" class="btn btn-primary">LIST ALL</a>
 								</div>
 								</div>
 								</div>
@@ -96,8 +102,10 @@
 						<div class="content"></div>
 						<!-- .content  -->
 					</div>
+					
 				</div>
 			</div>
 		</div>
-	<!-- ./wrapper -->
-<%@ include file="../include/footer.jsp" %>
+		<!-- ./Content Wrapper -->
+
+<%@ include file="../include/footer.jsp" %> 
