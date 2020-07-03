@@ -1,6 +1,7 @@
 package org.edu.controller;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -51,7 +52,20 @@ public class AdminController {
 	   response.setHeader("Content-Disposition", "attachment; filename="+fileName);
 	   return new FileSystemResource(file);
    }
-   
+   /**
+    * 파일 업로드 메서드 (공통)
+ * @throws IOException 
+    */
+   public String[] fileUpload(MultipartFile file) throws IOException {//매개변수로 받음
+	   String orginalName = file.getOriginalFilename();
+	      UUID uid = UUID.randomUUID(); //랜덤문자 구하기. 
+	      String saveName = uid.toString() + "." + orginalName.split("\\.")[1]; 
+		  String[] files = new String[] {saveName};//형변환.
+		   byte[] fileData = file.getBytes();
+		   File target = new File(uploadPath, saveName);//saveName으로 저장됨.
+		   FileCopyUtils.copy(fileData, target);
+		   return files;
+   }//물리적으로 파일 저장하는 역활만.db와 관계없이 거치면 파일 업로드가 됨.
    
    /**
     * 게시물관리 리스트 입니다.
@@ -106,22 +120,30 @@ public class AdminController {
     	//첨부파일 없이 저장
     	boardService.insertBoard(boardVO); 
     }else {
-	   // System.out.println("===첨부파일여부없이저장===" + file.getOriginalFilename());
-	    String orginalName = file.getOriginalFilename();//jsp에서 전송받은 파일의 이름
-      UUID uid = UUID.randomUUID(); //랜덤문자 구하기. 랜덤하게 아이디 만들때 씀.
-      String saveName = uid.toString() + "." + orginalName.split("\\.")[1]; //upload에 uid로 저장
-	  String[] files = new String[] {saveName};//getset으로 하려new String[]으로 형변환. 배열선언이유-BoardVO에 files이라는 변수를 배열로 만들어서. 
-	  boardVO.setFiles(files); //set으로 files저장. 
-	   boardService.insertBoard(boardVO); //copy아래가 맞는것같은데 아래두면 에러시 첨부파일이 쌓이게됨.
-	  //위는 DB에 첨부파일명을 저장하기 까지
-	  //여기서 부터 실제 파일을 폴더에 저장하기 시작
-	   byte[] fileData = file.getBytes();
-	   File target = new File(uploadPath, saveName);
-	   FileCopyUtils.copy(fileData, target);
+    	String[] files = fileUpload(file);//폼에서 전송받은 값을 리턴값으로 files가 나옴
+    	boardVO.setFiles(files); 
+ 	    boardService.insertBoard(boardVO);
     }
 	   rdat.addFlashAttribute("msg","입력");
 	   return "redirect:/admin/board/list";      
    }
+   /**
+    * 게시판 > 수정 입니다. 
+    * @throws Exception
+    */
+   @RequestMapping(value = "/admin/board/update", method = RequestMethod.GET)
+      public String boardUpdate(@RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {   
+      BoardVO boardVO = boardService.viewBoard(bno);
+      model.addAttribute("boardVO", boardVO);
+      return "admin/board/board_update";
+   }  
+   @RequestMapping(value = "/admin/board/update", method = RequestMethod.POST)
+      public String boardUpdate(BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {   
+      boardService.updateBoard(boardVO);
+      rdat.addFlashAttribute("msg", "수정");
+      return "redirect:/admin/board/view?bno=" + boardVO.getBno();      
+   }
+   
    
    /**
     * 게시물관리 > 삭제 입니다.
@@ -185,18 +207,6 @@ public class AdminController {
       return "redirect:/admin/member/list";
    }
 
-   @RequestMapping(value = "/admin/board/update", method = RequestMethod.GET)
-      public String boardUpdate(@RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {   
-      BoardVO boardVO = boardService.viewBoard(bno);
-      model.addAttribute("boardVO", boardVO);
-      return "admin/board/board_update";
-   }  
-   @RequestMapping(value = "/admin/board/update", method = RequestMethod.POST)
-      public String boardUpdate(BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {   
-      boardService.updateBoard(boardVO);
-      rdat.addFlashAttribute("msg", "수정");
-      return "redirect:/admin/board/view?bno=" + boardVO.getBno();      
-   }
    
    /**
     * 회원관리 > 수정 입니다. 
