@@ -1,6 +1,7 @@
 package org.edu.controller;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.UUID;
@@ -76,11 +77,13 @@ public class AdminController {
       // model { list -> boardList -> jsp }
 	   BoardVO boardVO = boardService.viewBoard(bno);
 	   //여기서부터 첨부파일명 때문에 추가
-     List<String> files = boardService.selectAttach(bno); 
-     String[] filenames = {}; 
-      for(String fileName : files) { 
-    	  filenames = new String[] {fileName};//형변환
-			}
+    List<String> files = boardService.selectAttach(bno); 
+	String[] filenames = new String[files.size()];
+	int cnt = 0;
+	for(String fileName : files) {
+		filenames[cnt++] = fileName;//실제뽑은 fileName을 하나씩 꺼냄.
+	}
+      
      //여러개 파일에서 1개 파일만 받는 것으로 변경
     // String[] filenames = new String[] {files};
       boardVO.setFiles(filenames);//String[]. 넣어야 매개변수 boardVO에 파일목록이 들어가. 
@@ -126,8 +129,17 @@ public class AdminController {
     */
    @RequestMapping(value = "/admin/board/delete", method = RequestMethod.POST)
       public String boardDelete(@RequestParam("bno") Integer bno, Locale locale, RedirectAttributes rdat) throws Exception {  
-	  boardService.deleteBoard(bno);
-
+	   List<String> files = boardService.selectAttach(bno); 
+	   boardService.deleteBoard(bno);
+	   
+	  //첨부파일 삭제(아래)
+		for(String fileName : files) {
+			//삭제 명령문추가(아래)
+			File target = new File(uploadPath, fileName);
+			 if(target.exists()) {
+				 target.delete();
+			 }		
+		}	  
 	  rdat.addFlashAttribute("msg", "삭제");
 	      return "redirect:/admin/board/list";
    }
