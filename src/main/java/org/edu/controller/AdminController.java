@@ -15,10 +15,12 @@ import org.edu.service.IF_BoardService;
 import org.edu.service.IF_MemberService;
 import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
+import org.edu.vo.PageVO;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -72,8 +74,17 @@ public class AdminController {
     * @throws Exception
     */
    @RequestMapping(value = "/admin/board/list", method = RequestMethod.GET)
-   public String boardList(Locale locale, Model model) throws Exception {
-      List<BoardVO> list = boardService.selectBoard();
+   public String boardList(@ModelAttribute("pageVO") PageVO pageVO, Locale locale, Model model) throws Exception {
+	  //Model에 받아야할 변수 pageVO ,jsp에서 받dk서 PpageVO, 에 줌 
+	  // PageVO pageVO = new PageVO(); //매개변수로 받기전에 테스트용
+	   if(pageVO.getPage() == null) {
+		   pageVO.setPage(1); //초기 page변수값 지정.초기에는 null이니 //?bno=11이런거 없을때
+	   }
+	   pageVO.setPerPageNum(10); //1페이지당 보여줄 게시물 수 강제지정
+      
+	   //url에 ?bno=11하면 바뀌는 이유가 page에 get,set해 놓아서.
+	   
+	   List<BoardVO> list = boardService.selectBoard(pageVO);
       // 모델클래스로 jsp화면으로 boardService에서 셀렉트한 list값을 boardList변수명으로 보낸다.
       // model { list -> boardList -> jsp }
       model.addAttribute("boardList", list);

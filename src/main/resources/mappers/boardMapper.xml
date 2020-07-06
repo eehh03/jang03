@@ -21,7 +21,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    </insert>
    <select id="selectBoard" resultType="org.edu.vo.BoardVO">
    <![CDATA[  
-      select * from tbl_board order by bno DESC
+      select * from tbl_board order by bno ASC
+      limit #{startBno}, #{perPageNum} 
    ]]>  
    </select>
    <update id="updateBoard">

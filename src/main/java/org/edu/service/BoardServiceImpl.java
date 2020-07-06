@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 import org.edu.dao.IF_BoardDAO;
 import org.edu.vo.BoardVO;
+import org.edu.vo.PageVO;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,8 +29,8 @@ public class BoardServiceImpl implements IF_BoardService {
 		}
 
 	@Override
-	public List<BoardVO> selectBoard() throws Exception {
-		return boardDAO.selectBoard();
+	public List<BoardVO> selectBoard(PageVO pageVO) throws Exception {
+		return boardDAO.selectBoard(pageVO);
 	}
 	@Transactional
 	@Override

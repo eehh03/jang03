@@ -34,7 +34,7 @@ public class HelloWorld {
 		endpage = (int)(Math.ceil(2/10.0) * 10); 
 		System.out.println("Math.ceil(2page/10.0) * 10) = " + endpage); 
 		endpage = (int)(Math.ceil(3/10.0) * 10); //0.9->1, 1.1->2 출력
-		System.out.println("Math.ceil(3page/10.0) * 10) = " + startBno); 
+		System.out.println("Math.ceil(3page/10.0) * 10) = " + endpage); 
 		/*2
 		ex) ceil(1.1) = 2, flore(1.1) =1
 		1*/
