@@ -136,11 +136,30 @@ public class AdminController {
       BoardVO boardVO = boardService.viewBoard(bno);
       model.addAttribute("boardVO", boardVO);
       return "admin/board/board_update";
-   }  
+   }
+   
    @RequestMapping(value = "/admin/board/update", method = RequestMethod.POST)
-      public String boardUpdate(BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {   
-      boardService.updateBoard(boardVO);
-      rdat.addFlashAttribute("msg", "수정");
+      public String boardUpdate(MultipartFile file, BoardVO boardVO, Locale locale, RedirectAttributes rdat) throws Exception {   
+	   if(file.getOriginalFilename() == "") {
+	   //업데이트시 첨부파일 없을 때 실행
+	 boardService.updateBoard(boardVO);
+	   }else {
+		 //기존 등록된 첨부파일 삭제(아래)
+		   List<String> delFiles = boardService.selectAttach(boardVO.getBno());
+		  
+		   for(String fileName : delFiles) {
+				//실제파일 삭제
+				File target = new File(uploadPath, fileName);
+				 if(target.exists()) {//조건:해당경로에 파일명이 존재하면
+					 target.delete(); //파일 삭제
+				}	//end if	
+			 }// end for문
+		   //아래에서 부터 신규 파일 업로드 (else)
+		   String[] files = fileUpload(file);//실제파일업로드 후 파일명 리턴
+		   boardVO.setFiles(files);//데이터베이스 <-> VO(get,set) <-> DAO클래스
+		   boardService.updateBoard(boardVO);
+	   } //큰 end if문
+	   rdat.addFlashAttribute("msg", "수정");
       return "redirect:/admin/board/view?bno=" + boardVO.getBno();      
    }
    

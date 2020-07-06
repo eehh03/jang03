@@ -13,4 +13,5 @@ public interface IF_BoardDAO {
  public void insertAttach(String fullName) throws Exception;
  public List<String> selectAttach(Integer bno) throws Exception;
  public void deleteAttach(Integer bno) throws Exception;
+ public void updateAttach(String fullName, Integer bno) throws Exception;
 }

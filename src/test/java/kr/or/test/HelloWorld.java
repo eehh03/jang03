@@ -10,7 +10,6 @@ public void run() { //메서드=함수=function()
 System.out.println("일반 타이어가 굴러갑니다");
 	}
 }
-
 class SnowTire extends Tire { //상속 =extends=>오른쪽이 부모 Tire에서 확장된게 SnowTire 
 	public void run() {
 		System.out.println("스노우 타이어가 굴러갑니다.");
@@ -19,6 +18,30 @@ class SnowTire extends Tire { //상속 =extends=>오른쪽이 부모 Tire에서 
 
 public class HelloWorld {
 	public static void main(String[] args) {
+		//(page:jsp클릭변수 - 1) * perPageNum:페이지당 보여줄 개수;
+		int startBno = (1 - 1) * 10; //1페이지.
+		System.out.println("쿼리변수 (1page - 1) * perPageNum = " + startBno);
+		startBno = (2 - 1) * 10; //2페이지.
+		System.out.println("쿼리변수 (2page - 1) * perPageNum = " + startBno);
+		startBno = (3 - 1) * 10; //3페이지.
+		System.out.println("쿼리변수 (3page - 1) * perPageNum = " + startBno);
+
+		
+		//천장함수 사용법 1(0)페이지, 2(1)페이지, 3(2)페이지 
+		//마지막 페이지의 계산식
+		int endpage = (int)(Math.ceil(1/10.0) * 10); //startBno 게시물 시작번호
+		System.out.println("Math.ceil(1page/10.0) * 10) = " + endpage); //1페이지 전송받았을 때
+		endpage = (int)(Math.ceil(2/10.0) * 10); 
+		System.out.println("Math.ceil(2page/10.0) * 10) = " + endpage); 
+		endpage = (int)(Math.ceil(3/10.0) * 10); //0.9->1, 1.1->2 출력
+		System.out.println("Math.ceil(3page/10.0) * 10) = " + startBno); 
+		/*2
+		ex) ceil(1.1) = 2, flore(1.1) =1
+		1*/
+		
+		//1페이지 클릭해도 end페이지는 10
+		//2페이지 -> 10
+	    //11페이지 -> 20
 		List<String> files = new ArrayList<>();
 		files.add("sample1.jpg");
 		files.add("sample2.jpg");
