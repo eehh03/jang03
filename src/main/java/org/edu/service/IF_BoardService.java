@@ -12,6 +12,6 @@ public void updateBoard(BoardVO boardVO) throws Exception;
 public void deleteBoard(Integer bno) throws Exception;
 public BoardVO viewBoard(Integer bno) throws Exception;
 public List<String> selectAttach(Integer bno) throws Exception;
-public int countBno() throws Exception;
+public int countBno(PageVO pageVO) throws Exception;
 
 }

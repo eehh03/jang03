@@ -77,7 +77,7 @@ public class AdminController {
 			pageVO.setPage(1);//초기 page변수값 지정
 		}
 		pageVO.setPerPageNum(10);//1페이지당 보여줄 게시물 수 강제지정
-		pageVO.setTotalCount(boardService.countBno());//강제로 입력한 값을 쿼리로 대체OK.
+		pageVO.setTotalCount(boardService.countBno(pageVO));//강제로 입력한 값을 쿼리로 대체OK.
 		List<BoardVO> list = boardService.selectBoard(pageVO);
 		//모델클래스로 jsp화면으로 boardService에서 셀렉트한 list값을 boardList변수명으로 보낸다.
 		//model { list -> boardList -> jsp }
