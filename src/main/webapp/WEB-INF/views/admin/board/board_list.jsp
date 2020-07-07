@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ include file="../include/header.jsp"  %>
 
 <!-- Content Wrapper. Contains page content -->
@@ -75,7 +76,9 @@
                       <td>${boardVO.bno}</td>
                       <td><a href="/admin/board/view?bno=${boardVO.bno}&page=${pageVO.page}">${boardVO.title}</a></td>
                       <td>${boardVO.writer}</td>
-                      <td><span class="tag tag-success">${boardVO.regdate}</span></td>
+                      <td><span class="tag tag-success">
+                     <fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${boardVO.regdate}"/> 
+                      </span></td>
                       <td><span class="badge badge-danger right">${boardVO.view_count}</span></td>
                     </tr>
                   </c:forEach>  

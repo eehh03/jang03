@@ -15,6 +15,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 
 <mapper namespace="org.edu.dao.IF_BoardDAO">
+<!-- 공통사용 검색쿼리 -->
+<sql id="sqlWhere">
+<if test="searchType != null">
+      AND (
+      title LIKE CONCAT('%',#{searchKeyword}, '%')
+      OR
+      content LIKE CONCAT('%',#{searchKeyword}, '%')
+      OR
+      writer LIKE CONCAT('%',#{searchKeyword}, '%')
+      )
+      </if>
+</sql>
    <insert id="insertBoard">
       insert into tbl_board (title,content,writer,regdate,view_count,reply_count) 
       values (#{title},#{content},#{writer},now(),#{view_count},#{reply_count}) 
@@ -23,15 +35,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    <!-- 키워드는 대문자, 유동적으로 변하는 것은 소문자 -->
       SELECT * FROM tbl_board
       WHERE 1 = 1
-      <if test="searchType != null">
-      AND (
-      title LIKE CONCAT('%',#{searchKeyword}, '%')
-      OR
-      content LIKE CONCAT('%',#{searchKeyword}, '%')
-      OR
-      writer LIKE CONCAT('%',#{searchKeyword}, '%')
-      )
-      </if>
+     <include refid="sqlWhere"></include>
       ORDER BY bno DESC
       LIMIT #{startBno}, #{perPageNum} 
   
@@ -39,15 +43,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    <select id="countBno" resultType="int">
 		select count(*) from tbl_board
 		 where 1 = 1
-		 <if test="searchType != null">
-      AND (
-      title LIKE CONCAT('%',#{searchKeyword}, '%')
-      OR
-      content LIKE CONCAT('%',#{searchKeyword}, '%')
-      OR
-      writer LIKE CONCAT('%',#{searchKeyword}, '%')
-      )
-      </if>
+		 <include refid="sqlWhere"></include>
 	</select>
    <update id="updateBoard">
       update tbl_board set
