@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="../include/header.jsp" %>
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -70,30 +70,35 @@
                     </tr>
                   </thead>
                   <tbody>
-                  
-                  <c:forEach items="${boardList}" var="boardVO" varStatus="status">
+                    <c:forEach items="${boardList}" var="boardVO" varStatus="status">
                     <tr>
                       <td>${boardVO.bno}</td>
-                      <td><a href="/admin/board/view?bno=${boardVO.bno}">${boardVO.title}</a></td>
+                      <td><a href="/admin/board/view?bno=${boardVO.bno}&page=${pageVO.page}">${boardVO.title}</a></td>
                       <td>${boardVO.writer}</td>
                       <td><span class="tag tag-success">${boardVO.regdate}</span></td>
                       <td><span class="badge badge-danger right">${boardVO.view_count}</span></td>
                     </tr>
-                   </c:forEach>
+                    </c:forEach>
                   </tbody>
             <td> <a href="/admin/board/write" class="btn btn-primary">CREATE</a>
                </td>
            <td>
-             <nav aria-label="Contacts Page Navigation">
-            
-            <ul class="pagination" style="position:relative;left:40%;">
-                <li class="page-item"><a href="#" class="page-link">«</a></li>
-                <li class="page-item"><a href="#" class="page-link">1</a></li>
-                <li class="page-item"><a href="#" class="page-link">2</a></li>
-                <li class="page-item"><a href="#" class="page-link">3</a></li>
-                <li class="page-item"><a href="#" class="page-link">»</a></li>
-             </ul>
-          </nav>
+          <nav aria-label="Contacts Page Navigation">
+          	<ul class="pagination" style="position:relative;left:40%;">
+          	<c:if test="${pageVO.prev}">
+       		<li class="page-item">
+          		<a class="page-link" href="/admin/board/list?page=${pageVO.startPage-1}">이전</a>
+       		</li>
+          	</c:if>
+          	<c:forEach begin="${pageVO.startPage}" end="${pageVO.endPage}" var="idx">
+          		<li class='page-item <c:out value="${idx==pageVO.page?'active':''}"/>'><a href="/admin/board/list?page=${idx}" class="page-link">${idx}</a></li>
+          	</c:forEach>
+          	<c:if test="${pageVO.next}">
+       		<li class="page-item">
+          		<a class="page-link" href="/admin/board/list?page=${pageVO.endPage+1}">다음</a>
+       		</li>
+          	</c:if>
+            </ul>  
           </nav>
                </td>
                 </table>
@@ -102,6 +107,8 @@
             </div>
             <!-- /.card -->
           </div>
+ 
+    
     </div>
     <!-- ./Content Wrapper. Contains page content -->
 <%@ include file="../include/footer.jsp" %> 

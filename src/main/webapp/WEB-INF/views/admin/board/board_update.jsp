@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="../include/header.jsp" %>
-					<!-- Content Wrapper. Contains page content -->
+<!-- Content Wrapper. Contains page content -->
 		<div class="content-wrapper">
 			<!-- Content Header (Page header) -->
 			<div class="content-header">
@@ -36,7 +36,8 @@
 									<div class="col-sm-12">
 										<!-- text input -->
 										<div class="form-group">
-											<label>Title</label> <input value = "${boardVO.title}" name="title" type="text" class="form-control"
+											<label>Title</label> 
+											<input value="${boardVO.title}" name="title" type="text" class="form-control"
 												placeholder="Enter Title">
 										</div>
 									</div>
@@ -53,7 +54,7 @@
 										<!-- textarea -->
 										<div class="form-group">
 											<label>Writer</label>
-											<input value = "${boardVO.writer}" name="writer" type="text"
+											<input value="${boardVO.writer}" name="writer" type="text"
 												class="form-control" placeholder="Enter ...">
 										</div>
 									</div>
@@ -77,21 +78,23 @@
 											</div>
 										</div>
 										<div class="buttons">
-										<input type="hidden" name="bno" value="${boardVO.bno}">
+											<input type="hidden" name="bno" value="${boardVO.bno}">
 											<button type="submit" class="btn btn-warning">Submit</button>
-											<a href="/admin/board/list" class="btn btn-primary">LIST ALL</a>
+											<a href="/admin/board/list?page=${pageVO.page}" class="btn btn-primary">LIST ALL</a>
 										</div>
 									</div>
 								</div>
 							</form>
 						</div>
 						<!-- /.content-header -->
+
 						<!-- Main content -->
 						<div class="content"></div>
 						<!-- .content  -->
 					</div>
+					
 				</div>
 			</div>
 		</div>
-		<!-- ./Content wrapper -->
+		<!-- ./Content Wrapper -->
 <%@ include file="../include/footer.jsp" %> 

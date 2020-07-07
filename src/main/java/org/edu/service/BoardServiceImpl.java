@@ -63,4 +63,8 @@ public class BoardServiceImpl implements IF_BoardService {
 	public List<String> selectAttach(Integer bno) throws Exception {
 		return boardDAO.selectAttach(bno);
 	}
+	@Override
+	public int countBno() throws Exception {
+		return boardDAO.countBno();
+	}
 }

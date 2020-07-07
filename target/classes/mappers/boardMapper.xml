@@ -25,6 +25,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       limit #{startBno}, #{perPageNum} 
    ]]>  
    </select>
+   <select id="countBno" resultType="int">
+		select count(*) from tbl_board
+	</select>
    <update id="updateBoard">
       update tbl_board set
       title = #{title},
