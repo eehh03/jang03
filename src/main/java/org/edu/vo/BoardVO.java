@@ -2,9 +2,13 @@ package org.edu.vo;
 
 import java.util.Date;
 
+import org.hibernate.validator.constraints.NotBlank;
+
 public class BoardVO {
    private Integer bno;
+   @NotBlank(message= "게시물제목은 필수 입력사항 입니다!")
    private String title;
+   @NotBlank(message= "게시물본문은 필수 입력사항 입니다!")
    private String content;
    private String writer;
    private Date regdate;

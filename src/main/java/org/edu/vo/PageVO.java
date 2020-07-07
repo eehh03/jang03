@@ -17,19 +17,15 @@ public class PageVO {
 	public String getSearchType() {
 		return searchType;
 	}
-
 	public void setSearchType(String searchType) {
 		this.searchType = searchType;
 	}
-
 	public String getSearchKeyword() {
 		return searchKeyword;
 	}
-
 	public void setSearchKeyword(String searchKeyword) {
 		this.searchKeyword = searchKeyword;
 	}
-
 	private void calcPage() { //calc 계산기
 		//page변수는 현재 jsp에서 클릭한 페이지 번호
 		int tempEnd = (int)(Math.ceil(page / 10.0) * 10); 
