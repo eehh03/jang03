@@ -9,6 +9,7 @@ import javax.sql.DataSource;
 
 import org.edu.service.IF_MemberService;
 import org.edu.vo.MemberVO;
+import org.edu.vo.PageVO;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -72,14 +73,16 @@ public class DataSourceTest {
 	//public void test() {
 	public void testSelectMember() throws Exception{
 		System.out.println("회원리스트 입니다");
-		memberService.selectMember();
-		/*List<MemberVO> list = memberService.selectMember();//MemberVO는 org.edu.vo로 import해야
-		for(MemberVO vo:list ) {//vo로 받는데 list라는 변수에서 받음
+		PageVO pageVO = new PageVO();
+		pageVO.setPage(1);
+		pageVO.setPerPageNum(10);
+		List<MemberVO> list = memberService.selectMember(pageVO);
+		System.out.println(list);
+		/*for(MemberVO vo:list ) {//vo로 받는데 list라는 변수에서 받음
 		System.out.println("사용자아이디 : " + vo.getUser_id());
 		System.out.println("사용자이메일:" + vo.getEmail());
 		}
-		//System.out.println(memberService.selectMember());	 */	
-	}
+		//System.out.println(memberService.selectMember());	 	
+*/	}
 	
 }
-

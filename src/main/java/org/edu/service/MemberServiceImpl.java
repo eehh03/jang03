@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.edu.dao.IF_MemberDAO;
 import org.edu.vo.MemberVO;
+import org.edu.vo.PageVO;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,8 +22,8 @@ public class MemberServiceImpl implements IF_MemberService {
 	}
 
 	@Override
-	public List<MemberVO> selectMember() throws Exception {
-		return memberDAO.selectMember();
+	public List<MemberVO> selectMember(PageVO pageVO) throws Exception {
+		return memberDAO.selectMember(pageVO);
 		
 	}
 
@@ -41,6 +42,11 @@ public class MemberServiceImpl implements IF_MemberService {
 	@Override
 	public MemberVO viewMember(String user_id) throws Exception {
 		return memberDAO.viewMember(user_id);
+	}
+
+	@Override
+	public int countUserId(PageVO pageVO) throws Exception {
+		return memberDAO.countUserId(pageVO);
 	}
 
 }

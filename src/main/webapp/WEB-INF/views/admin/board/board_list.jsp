@@ -102,7 +102,6 @@
                </li>
                </c:if>
              </ul>
-
           </nav>
                </td>
                 </table>

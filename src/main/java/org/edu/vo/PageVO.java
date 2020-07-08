@@ -1,7 +1,7 @@
 package org.edu.vo;
 
 public class PageVO {
-	private int startBno;//null없음
+	private int startNo;//게시판테이블,회원테이블의 필드와는 직접관계없음. null없음
 	private int perPageNum;//null없음
 	
 	private Integer page; //jsp에서 받게되는데, null로 값이 올때 에러가 발생하지 않도록 Integer사용-클래스형 변수 만든거
@@ -85,13 +85,13 @@ public class PageVO {
 	public void setPage(Integer page) {
 		this.page = page;
 	}
-	public int getStartBno() {
+	public int getStartNo() {
 		//DB쿼리에서 사용함. 시작데이터번호 = (페이지번호 - 1)*페이지당 보여지는 개수.
-		startBno = (this.page - 1) * perPageNum;
-		return startBno;
+		startNo = (this.page - 1) * perPageNum;
+		return startNo;
 	}
-	public void setStartBno(int startBno) {
-		this.startBno = startBno;
+	public void setStartNo(int startNo) {
+		this.startNo = startNo;
 	}
 	public int getPerPageNum() {
 		return perPageNum;

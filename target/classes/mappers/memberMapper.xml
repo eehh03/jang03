@@ -14,6 +14,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="org.edu.dao.IF_MemberDAO">
+<!-- 공통사용 검색쿼리 -->
+<sql id="sqlWhere">
+<if test="searchType != null">
+      AND (
+      user_name LIKE CONCAT('%',#{searchKeyword}, '%')
+      OR
+      user_id LIKE CONCAT('%',#{searchKeyword}, '%')
+      OR
+      email LIKE CONCAT('%',#{searchKeyword}, '%')
+      )
+      </if>
+</sql>
 
  	<insert id = "insertMember">
  	insert into tbl_member(user_id, user_pw, user_name, email, point, enabled, levels, reg_date)
@@ -21,9 +33,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
  	</insert>
  	
  	<select id="selectMember" resultType="org.edu.vo.MemberVO" >
- 	select * from tbl_member order by reg_date DESC ;
+ 	select * from tbl_member
+ 	 WHERE 1 = 1
+     <include refid="sqlWhere"></include>
+      ORDER BY reg_date DESC
+      LIMIT #{startNo}, #{perPageNum} 
  	</select>
- 	
+ 	 <select id="countUserId" resultType="int">
+		select count(*) from tbl_member
+		 where 1 = 1
+		 <include refid="sqlWhere"></include>
+	</select>
+	
  	<update id="updateMember">
  	update tbl_member set 
  	user_pw = #{user_pw}, 

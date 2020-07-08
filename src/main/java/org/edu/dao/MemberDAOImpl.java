@@ -6,6 +6,7 @@ import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.edu.vo.MemberVO;
+import org.edu.vo.PageVO;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -23,8 +24,8 @@ public class MemberDAOImpl implements IF_MemberDAO{
 	}
 
 	@Override
-	public List<MemberVO> selectMember() throws Exception {
-		return sqlSession.selectList(mapperQuery + ".selectMember");
+	public List<MemberVO> selectMember(PageVO pageVO) throws Exception {
+		return sqlSession.selectList(mapperQuery + ".selectMember", pageVO);
 		
 	}
 
@@ -43,6 +44,11 @@ public class MemberDAOImpl implements IF_MemberDAO{
 	@Override
 	public MemberVO viewMember(String user_id) throws Exception {
 		return sqlSession.selectOne(mapperQuery + ".viewMember", user_id);
+	}
+
+	@Override
+	public int countUserId(PageVO pageVO) throws Exception {
+		return sqlSession.selectOne(mapperQuery+ ".countUserId", pageVO);
 	}
 
 }
