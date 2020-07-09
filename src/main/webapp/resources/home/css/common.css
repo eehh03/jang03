@@ -128,7 +128,7 @@ hr {display:none;}
 header {position:absolute; left:0; top:0; width:100%; height:113px; background:rgba(0,0,0,0.5); z-index:100;}
 header .header_area {/*position:relative;*/}
 header .header_area h1 {float:left; padding:25px 0 0;}
-header .header_area h1 a {display:block; width:270px; height:71px; text-indent:-9999px; overflow:hidden; background:url(../img/logo.png) no-repeat;}
+header .header_area h1 a {display:block; width:270px; height:71px; text-indent:-9999px; overflow:hidden; background:url(../img/main_logo.png) no-repeat;}
 header .header_area .openMOgnb {display:none;}
 .header_cont {float:right; width:780px;padding-right:10px;}
 .header_cont .util {text-align: right; padding-top:10px;}
@@ -391,7 +391,11 @@ h1.loginTit a img {width:100%;}
 	header {height:90px; text-align:center; z-index:200; background:rgba(0,0,0,0.5);}
 	header.on {background:#31353d;}
 	header .header_area h1 {float:none; width:100%; height:50px; text-align:center; padding:3px 0 0;}
-	header .header_area h1 a {display:inline-block; width:150px; height:83px; background-size:150px 83px;}
+	header .header_area h1 a {display:inline-block; 
+	width:150px; 
+	height:80px; 
+	background-size:150px 80px; 
+	background-position:center center;}
 	header .header_area .openMOgnb {display:block; position:absolute; left:15px; top:35px; width:23px; height:16px;}
 	header .header_area .openMOgnb span {box-sizing:border-box; display:block; width:25px; height:3px; margin-bottom:4px; border-radius:10px; background:#fff;}
 	header .header_area .openMOgnb span + span {width:17px;}

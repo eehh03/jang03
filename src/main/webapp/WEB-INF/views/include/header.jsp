@@ -28,52 +28,35 @@
 
 	<header id="header">
 		<div class="header_area box_inner clear">	
-			<h1><a href="/resources/home/javascript:;">스프링 in 자바</a></h1>
+			<h1><a href="/">사용자홈페이지</a></h1>
 			<p class="openMOgnb"><a href="#"><b class="hdd">메뉴열기</b> <span></span><span></span><span></span></a></p>
 			<!-- header_cont -->
 			<div class="header_cont">
 				<ul class="util clear">
-					<li><a href="/resources/home/javascript:;">로그인</a></li>
-					<li><a href="/resources/home/javascript:;">회원가입</a></li>
+					<li><a href="/login">로그인</a></li>
+					<li><a href="/admin">관리자</a></li>
 				</ul>	
 				<nav>
 				<ul class="gnb clear">
-					<li><a href="/resources/home/javascript:;" class="openAll1">스프링정보</a>
+					<li><a href="/sample" class="openAll1">포트폴리오</a>
 
                         <div class="gnb_depth gnb_depth2_1">
                             <ul class="submenu_list">
-                                <li><a href="/resources/home/javascript:;">국내</a></li>
-                                <li><a href="/resources/home/javascript:;">해외</a></li>
+                                <li><a href="/sample">원페이지</a></li>
+                                <li><a href="/sample/slide">슬라이드</a></li>
                             </ul>
                         </div>
 					</li>
-					<li><a href="/resources/home/javascript:;" class="openAll2">고객센터</a>
+					<li><a href="#" class="openAll2">고객센터</a>
 				        <div class="gnb_depth gnb_depth2_2">
                             <ul class="submenu_list">
-                                <li><a href="/resources/home/javascript:;">공지사항</a></li>
-                                <li><a href="/resources/home/javascript:;">문의하기</a></li>
-                            </ul>
-                        </div>
-					</li>
-					<li><a href="/resources/home/javascript:;" class="openAll3">상품투어</a>
-                        <div class="gnb_depth gnb_depth2_3">
-                            <ul class="submenu_list">
-                                <li><a href="/resources/home/javascript:;">프로그램 소개</a></li>
-                                <li><a href="/resources/home/javascript:;">스프링자료</a></li>
-                            </ul>
-                        </div>
-					</li>
-					<li><a href="/resources/home/javascript:;" class="openAll4">티켓/가이드</a>
-                        <div class="gnb_depth gnb_depth2_4">
-                            <ul class="submenu_list">
-                                <li><a href="/resources/home/javascript:;">항공</a></li>
-                                <li><a href="/resources/home/javascript:;">호텔</a></li>
+                                <li><a href="#">공지사항</a></li>
                             </ul>
                         </div>
 					</li>
 				</ul>
                 </nav>
-				<p class="closePop"><a href="/resources/home/javascript:;">닫기</a></p>
+				<p class="closePop"><a href="#">닫기</a></p>
 			</div>
 			<!-- //header_cont -->
 		</div>

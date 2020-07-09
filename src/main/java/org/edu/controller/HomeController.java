@@ -54,7 +54,7 @@ public String work(Locale locale, Model model) {
 	}
 
 	/** 샘플 파일 홈 입니다.	페이지 만들때 기본.*/
-	@RequestMapping(value = "/sample/", method = RequestMethod.GET)
+	@RequestMapping(value = "/sample", method = RequestMethod.GET)
 	public String sample(Locale locale, Model model) {
 		return "sample/home";
 	}
