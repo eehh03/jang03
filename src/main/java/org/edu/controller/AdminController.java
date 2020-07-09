@@ -18,6 +18,7 @@ import org.edu.vo.BoardVO;
 import org.edu.vo.MemberVO;
 import org.edu.vo.PageVO;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.FileCopyUtils;
@@ -236,6 +237,13 @@ public class AdminController {
 	}
 	@RequestMapping(value = "/admin/member/write", method = RequestMethod.POST)
 	public String memberWrite(@Valid MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+		String new_pw = memberVO.getUser_pw();//예를 들면 1234. 새로운 암호 입력시 필요
+		if(new_pw !="") {//공백아닐 때 영역지정해 실행.암호없으면 null로 진행됨
+			//스프링 시큐리티 4.x BCryptPasswordEncoder클래스 암호를 사용 
+			BCryptPasswordEncoder bcryptPasswordEncoder = new BCryptPasswordEncoder(10);
+			String bcryptPassword = bcryptPasswordEncoder.encode(new_pw);//여기 거치는 순간 1234가 암호화 처리됨. encode에 1234를 집어넣음.
+			memberVO.setUser_pw(bcryptPassword);//DB에 들어가기전 값을 set시킴
+		}
 		memberService.insertMember(memberVO);
 		rdat.addFlashAttribute("msg", "입력");
 		return "redirect:/admin/member/list";
@@ -254,6 +262,13 @@ public class AdminController {
 	}
 	@RequestMapping(value = "/admin/member/update", method = RequestMethod.POST)
 	public String memberUpdate(@ModelAttribute("pageVO") PageVO pageVO, MemberVO memberVO, Locale locale, RedirectAttributes rdat) throws Exception {
+		String new_pw = memberVO.getUser_pw();//예를 들면 1234. 새로운 암호 입력시 필요
+		if(new_pw !="") {//공백아닐 때 영역지정해 실행.암호없으면 null로 진행됨
+			//스프링 시큐리티 4.x BCryptPasswordEncoder클래스 암호를 사용 
+			BCryptPasswordEncoder bcryptPasswordEncoder = new BCryptPasswordEncoder(10);
+			String bcryptPassword = bcryptPasswordEncoder.encode(new_pw);//여기 거치는 순간 1234가 암호화 처리됨. encode에 1234를 집어넣음.
+			memberVO.setUser_pw(bcryptPassword);//DB에 들어가기전 값을 set시킴
+		}
 		memberService.updateMember(memberVO);
 		rdat.addFlashAttribute("msg", "수정");
 		return "redirect:/admin/member/view?user_id=" + memberVO.getUser_id() + "&page=" + pageVO.getPage();

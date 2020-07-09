@@ -47,7 +47,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	
  	<update id="updateMember">
  	update tbl_member set 
+ 	<if test="user_pw !=''">
  	user_pw = #{user_pw}, 
+ 	</if>
  	user_name = #{user_name},
  	email = #{email},
  	point = #{point},
