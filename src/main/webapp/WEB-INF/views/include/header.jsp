@@ -18,6 +18,11 @@
     <script src="/resources/home/js/html5shiv.js"></script>
 	<script src="/resources/home/js/placeholders.min.js"></script>
 <![endif]-->
+<script> 
+if('${msg}' != ""){
+	alert("${msg} 에 성공하였습니다!");
+	} //업데이트 성공시 나옴.200630
+</script>
 </head>
 <body>
 <ul class="skipnavi">
