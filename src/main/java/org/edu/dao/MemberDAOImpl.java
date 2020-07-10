@@ -10,29 +10,26 @@ import org.edu.vo.PageVO;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class MemberDAOImpl implements IF_MemberDAO{
-	private static String mapperQuery = "org.edu.dao.IF_MemberDAO"; //static 한번쓰고 말거
+public class MemberDAOImpl implements IF_MemberDAO {
+
+	private static String mapperQuery = "org.edu.dao.IF_MemberDAO";
 	
 	@Inject
-	private SqlSession sqlSession;//sqlSession사용위해 Inject
-	//오버라이드-다형성(형태가 다양하다)
+	private SqlSession sqlSession; 
 	
 	@Override
 	public void insertMember(MemberVO memberVO) throws Exception {
-		sqlSession.insert(mapperQuery + ".insertMember", memberVO);//memberMapper.xml과 연결
-		
+		sqlSession.insert(mapperQuery + ".insertMember", memberVO);
 	}
 
 	@Override
 	public List<MemberVO> selectMember(PageVO pageVO) throws Exception {
 		return sqlSession.selectList(mapperQuery + ".selectMember", pageVO);
-		
 	}
 
 	@Override
 	public void updateMember(MemberVO memberVO) throws Exception {
 		sqlSession.update(mapperQuery + ".updateMember", memberVO);
-		
 	}
 
 	@Override
@@ -48,7 +45,7 @@ public class MemberDAOImpl implements IF_MemberDAO{
 
 	@Override
 	public int countUserId(PageVO pageVO) throws Exception {
-		return sqlSession.selectOne(mapperQuery+ ".countUserId", pageVO);
+		return sqlSession.selectOne(mapperQuery + ".countUserId", pageVO);
 	}
 
 }

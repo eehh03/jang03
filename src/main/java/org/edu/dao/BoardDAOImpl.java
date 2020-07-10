@@ -5,13 +5,15 @@ import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
+
 import org.apache.ibatis.session.SqlSession;
 import org.edu.vo.BoardVO;
 import org.edu.vo.PageVO;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class BoardDAOImpl implements IF_BoardDAO{
+public class BoardDAOImpl implements IF_BoardDAO {
+
 	private static String mapperQuery = "org.edu.dao.IF_BoardDAO";
 	
 	@Inject
@@ -19,7 +21,7 @@ public class BoardDAOImpl implements IF_BoardDAO{
 
 	@Override
 	public void insertBoard(BoardVO boardVO) throws Exception {
-		sqlSession.insert(mapperQuery + ".insertBoard", boardVO);
+		sqlSession.insert(mapperQuery + ".insertBoard", boardVO);		
 	}
 
 	@Override
@@ -29,22 +31,22 @@ public class BoardDAOImpl implements IF_BoardDAO{
 
 	@Override
 	public void updateBoard(BoardVO boardVO) throws Exception {
-		sqlSession.update(mapperQuery + ".updateBoard", boardVO);	
+		sqlSession.update(mapperQuery + ".updateBoard", boardVO);
 	}
 
 	@Override
 	public void deleteBoard(Integer bno) throws Exception {
-		sqlSession.delete(mapperQuery +".deleteBoard", bno);		
+		sqlSession.delete(mapperQuery + ".deleteBoard", bno);
 	}
 
 	@Override
 	public BoardVO viewBoard(Integer bno) throws Exception {
-		return sqlSession.selectOne(mapperQuery +".viewBoard", bno);
+		return sqlSession.selectOne(mapperQuery + ".viewBoard", bno);
 	}
 
 	@Override
 	public void insertAttach(String fullName) throws Exception {
-		sqlSession.insert(mapperQuery+ ".insertAttach", fullName);
+		sqlSession.insert(mapperQuery + ".insertAttach", fullName);
 	}
 
 	@Override
@@ -55,7 +57,6 @@ public class BoardDAOImpl implements IF_BoardDAO{
 	@Override
 	public void deleteAttach(Integer bno) throws Exception {
 		sqlSession.delete(mapperQuery + ".deleteAttach", bno);
-		
 	}
 
 	@Override
@@ -65,9 +66,11 @@ public class BoardDAOImpl implements IF_BoardDAO{
 		paramMap.put("fullname", fullName);
 		sqlSession.insert(mapperQuery + ".updateAttach", paramMap);
 	}
+
 	@Override
 	public int countBno(PageVO pageVO) throws Exception {
 		return sqlSession.selectOne(mapperQuery + ".countBno", pageVO);
 	}
+
 	
 }

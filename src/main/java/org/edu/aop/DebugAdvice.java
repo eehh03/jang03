@@ -8,14 +8,13 @@ import org.aspectj.lang.annotation.Aspect;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
-//200625
-@Component 
-//root-context에 component-scan에 aop있어서 없애도됨.근데 주석처리하면 beans에 안나옴.
+
+@Component
 @Aspect
 public class DebugAdvice {
-	private static final Logger logger = LoggerFactory.getLogger(DebugAdvice.class); 
-	/*DebugAdvice에서 가져와 logger(파)씀
-	 * ...481p.@Around는 메서드 실행에 직접 관여함.
+	private static final Logger logger = LoggerFactory.getLogger(DebugAdvice.class);
+	/*
+	 * ...@Around는 메서드 실행에 직접 관여함.
 	 * ...Around타입의 기능은 파라미터로 ProceedingJoinPoint 타입을 사용함.
 	 * ...ProceedingJoinPoint는 JoinPoint의 모든 메서드를 가지면서도, 직접 target객체의
 	 * ...메서드를 실행할 수 있는 기능이 추가됨.
@@ -26,10 +25,9 @@ public class DebugAdvice {
 	 */
 	//@Around("execution(* org.edu.service.MemberService*.*(..))")
 	@Around("execution(* org.edu.controller.AdminController.*(..))")
-	//MemberService에 있는 것을 캐치해서 감싸줄?.Arround감싸줄 주소
 	public Object timeLog(ProceedingJoinPoint pjp)throws Throwable{
 		    
-		logger.debug("S.debugLog.=============================================");
+	  logger.debug("S.debugLog.=============================================");
 	  long startTime = System.currentTimeMillis();
 	  logger.debug(Arrays.toString(pjp.getArgs()));
 	  
@@ -40,5 +38,5 @@ public class DebugAdvice {
 	  logger.debug("E.debugLog.=============================================");
 	  
 	  return result;
-	}   
+	}
 }
