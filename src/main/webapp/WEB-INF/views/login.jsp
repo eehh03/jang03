@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ include file="include/header.jsp" %>
+<script> 
+if('${param.msg}' == "fail"){
+	alert('로그인에 실패했습니다! 상세메세지  ${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}');
+	} //업데이트 성공시 나옴.200710
+</script>
 <!-- container start -->
 	<div id="container">
 		<!-- location_area -->
@@ -18,25 +24,26 @@
 		<!-- bodytext_area -->
 		<div class="bodytext_area box_inner">
 			<!-- appForm -->
-			<form action="#" class="appForm">
+			<form action="/login" method="POST" class="appForm">
 				<fieldset>
 					<legend>로그인</legend>
 					<p class="info_pilsoo pilsoo_item">필수입력</p>
 					<ul class="app_list">
 						<li class="clear">
 							<label for="name_lbl" class="tit_lbl pilsoo_item">아이디</label>
-							<div class="app_content"><input type="text" class="w100p" id="name_lbl" placeholder="아이디를 입력해주세요"/></div>
+							<div class="app_content"><input name="user_id" type="text" class="w100p" id="name_lbl" placeholder="아이디를 입력해주세요"/></div>
 						</li>
 						<li class="clear">
 							<label for="pwd_lbl" class="tit_lbl pilsoo_item">암호</label>
-							<div class="app_content"><input type="password" class="w100p" id="pwd_lbl" placeholder="암호를 입력해주세요"/></div>
+							<div class="app_content"><input name="user_pw" type="password" class="w100p" id="pwd_lbl" placeholder="암호를 입력해주세요"/></div>
 						</li>
 
 					</ul>
-					<p class="btn_line"><a href="javascript:;" class="btn_baseColor">로그인</a></p>	
+					<p class="btn_line"><button type="submit" class="btn_baseColor">로그인</button></p>	
 				</fieldset>
 			</form>
 			<!-- //appForm -->
+			<br>
 			
 		</div>
 		<!-- //bodytext_area -->

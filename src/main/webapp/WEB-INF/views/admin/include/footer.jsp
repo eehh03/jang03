@@ -6,7 +6,7 @@
     <div class="p-3">
       <h5>Title</h5>
       <p>Sidebar content</p>
-      <button type="button" class="btn btn-primary btn-lg btn-block">로그아웃</button>
+      <a href="/logout" class="btn btn-primary btn-lg btn-block">로그아웃</a>
     </div>
   </aside>
   <!-- /.control-sidebar -->
