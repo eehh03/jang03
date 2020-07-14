@@ -14,7 +14,6 @@
 
 	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
 	<resources mapping="/resources/**" location="/resources/" />
-
 	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
@@ -22,20 +21,22 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="org.edu.controller" />
+ 	 <context:component-scan base-package="org.edu.util" />	
 	<!-- html폼에서 첨부파일 업로드 설정 10메가 제한 -->
 	<beans:bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 		<beans:property name="maxUploadSize" value="10485760"></beans:property>
 	</beans:bean>
-	<!-- 업로드한 파일이 저장되는 위치: 운영서버용 /tmp -->
+	<!-- 업로드한 파일이 저장되는 위치: 운영서버용 /tmp (헤로쿠시 주석해제 -->
 	<beans:bean id="uploadPath" class="java.lang.String">
 	    <beans:constructor-arg value="/tmp">
 	    </beans:constructor-arg>
 	</beans:bean>
-	<!-- 업로드한 파일이 저장되는 위치: 로컬PC용 
+	
+	<!-- 업로드한 파일이 저장되는 위치: 로컬PC용 (헤롴시 주석처리)
 	<beans:bean id="uploadPath" class="java.lang.String">
 	    <beans:constructor-arg value="C:\\egov\\workspace\\upload">
 	    </beans:constructor-arg>
 	</beans:bean>
-	-->
+	 -->
 </beans:beans>

@@ -24,7 +24,7 @@
 	    <security:csrf disabled="true" />
 	    <security:form-login
 	    	login-page="/login"
-	    	login-processing-url="/login"
+	    	login-processing-url="/login" 
 	    	always-use-default-target="true"
 	    	default-target-url="/login_success"
 	    	authentication-failure-url="/login?msg=fail"

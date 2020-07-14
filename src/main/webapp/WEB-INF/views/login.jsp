@@ -15,7 +15,7 @@ if('${param.msg}' == "fail"){
 				<h2 class="tit_page">스프링 <span class="in">in</span> 자바</h2>
 				<p class="location">MEMBER <span class="path">/</span> 로그인</p>
 				<ul class="page_menu clear">
-					<li><a href="javascript:;" class="on">회원가입</a></li>
+					<li><a href="javascript:;" class="on">로그인</a></li>
 				</ul>
 			</div>
 		</div>	
