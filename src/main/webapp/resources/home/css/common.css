@@ -126,7 +126,7 @@ hr {display:none;}
 .box_inner {margin:0 auto;}
 
 /* header */
-header {position:absolute; left:0; top:0; width:100%; height:113px; background:#001455; z-index:100;}
+header {position:absolute; left:0; top:0; width:100%; height:113px; background:orange; z-index:100;}
 header .header_area {/*position:relative;*/}
 header .header_area h1 {float:left; padding:25px 0 0;}
 header .header_area h1 a {display:block; width:270px; height:71px; text-indent:-9999px; overflow:hidden; background:url(../img/main_logo.png) no-repeat;}
@@ -178,9 +178,9 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 .visualRoll {position:relative; width:100%;}
 .viewImgList {position:relative; width:100%;}	
 .viewImgList li {text-align:center; height:550px; line-height:550px;}
-.viewImgList li.imglist0 {position:relative; z-index:50; background:#0068d1;}
-.viewImgList li.imglist1 {position:absolute; width:100%; left:0; top:0; z-index:10; background:#0068d1;}
-.viewImgList li.imglist2 {position:absolute; width:100%; left:0; top:0; z-index:10; background:#0068d1;}
+.viewImgList li.imglist0 {position:relative; z-index:50; background:#ffdb58;}
+.viewImgList li.imglist1 {position:absolute; width:100%; left:0; top:0; z-index:10; background:#ffdb58;}
+.viewImgList li.imglist2 {position:absolute; width:100%; left:0; top:0; z-index:10; background:#ffdb58;}
 .viewImgList li {background-size:cover !important;}
 .viewImgList li .roll_content {position:relative;}
 .viewImgList li .roll_content .roll_txtline {position:absolute; left:0; bottom:60px; width:100%; line-height:1; text-align:center; font-size:22px; color:#fff; letter-spacing:2px;}
@@ -243,12 +243,12 @@ footer .foot_area .snslink li + li + li a {background-image:url(../img/ico_insta
 .pop_content .pop_list li .pop_txt p {padding-top:10px; line-height:1.8; font-size:17px; width:95%; margin:0 auto; overflow:hidden; word-break:keep-all; letter-spacing:-2px;}
 
 /* sub_page */
-.location_area {height:445px; background:#0068d1;}
+.location_area {height:445px; background:#f5f5dc;}
 .location_area.about {}
-.location_area.customer {background-image:#0068d1;}
-.location_area.package {background-image:url(../img/img_top3.jpg);}
-.location_area.ticket {background-image:url(../img/img_top4.jpg);}
-.location_area.member {background-image:url(../img/img_top5.jpg);}
+.location_area.customer {background:#ffdb58;}
+.location_area.package {background:#ffdb58;}
+.location_area.ticket {background:#ffdb58;}
+.location_area.member {background:#ffdb58;}
 .location_area h2.tit_page {padding:250px 0 0 0; margin:0 50px; border-bottom:1px solid #ccc; font:30px "Arial Narrow"; color:#fff; letter-spacing:3px;}
 .location_area h2.tit_page .in {font-variant: small-caps;}
 .location_area p.location {padding:20px 0 0 50px; color:#fff;}

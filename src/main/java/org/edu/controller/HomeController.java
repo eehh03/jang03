@@ -1,5 +1,6 @@
 package org.edu.controller;
 
+import java.io.File;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -49,6 +50,65 @@ public class HomeController {
 	private FileDataUtil fileDataUtil;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	
+	/**
+	 * 게시물관리 > 삭제 입니다.
+	 * @throws Exception 
+	 */
+	@RequestMapping(value = "/board/delete", method = RequestMethod.POST)
+	public String boardDelete(@RequestParam("bno") Integer bno, Locale locale, RedirectAttributes rdat) throws Exception {
+		List<String> files = boardService.selectAttach(bno);
+		
+		boardService.deleteBoard(bno);
+		
+		//첨부파일 삭제(아래)
+		for(String fileName : files) {
+			//삭제 명령문 추가(아래)
+			File target = new File(fileDataUtil.getUploadPath(), fileName);
+			if(target.exists()) {
+				target.delete();
+			}
+		}		
+		
+		rdat.addFlashAttribute("msg", "삭제");
+		return "redirect:/board/list";
+	}
+	
+	/**
+	 * 게시물관리 > 수정 입니다.
+	 * @throws Exception 
+	 */
+	@RequestMapping(value = "/board/update", method = RequestMethod.GET)
+	public String boardUpdate(@ModelAttribute("pageVO") PageVO pageVO, @RequestParam("bno") Integer bno, Locale locale, Model model) throws Exception {
+		BoardVO boardVO = boardService.viewBoard(bno);
+		model.addAttribute("boardVO", boardVO);
+		model.addAttribute("pageVO", pageVO);
+		return "board/board_update";
+	}
+	@RequestMapping(value = "/board/update", method = RequestMethod.POST)
+	public String boardUpdate(@ModelAttribute("pageVO") PageVO pageVO, MultipartFile file,@Valid BoardVO boardVO,Locale locale, RedirectAttributes rdat) throws Exception {
+		if(file.getOriginalFilename() == "") {//조건:첨부파일 전송 값이 없다면
+			boardService.updateBoard(boardVO);
+		} else {
+			//기존등록된 첨부파일 삭제처리(아래)
+			List<String> delFiles = boardService.selectAttach(boardVO.getBno());
+			for(String fileName : delFiles) {
+				//실제파일 삭제
+				File target = new File(fileDataUtil.getUploadPath(), fileName);
+				if(target.exists()) { //조건:해당경로에 파일명이 존재하면
+					target.delete();  //파일삭제
+				}//End if
+			}//End for
+			//아래 신규파일 업로드
+			String[] files = fileDataUtil.fileUpload(file);//실제파일업로드후 파일명 리턴
+			boardVO.setFiles(files);//데이터베이스 <-> VO(get,set) <-> DAO클래스
+			boardService.updateBoard(boardVO);
+		}//End if
+		
+		
+		rdat.addFlashAttribute("msg", "수정");
+		return "redirect:/board/view?bno=" + boardVO.getBno() + "&page=" + pageVO.getPage();
+	}
 	
 	/**
 	 * 게시물관리 > 등록 입니다.

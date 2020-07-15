@@ -134,7 +134,7 @@
                 </div>
                 </div>
                 <div class="col-1" style="display:inline-block" >
-                        <select class="form-control">
+                        <select id="searchType" class="form-control">
                           <option>--</option>
                         </select>
                         </div>
@@ -265,6 +265,27 @@
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+<script>
+function myFunc(){//function함수실행
+	alert('테스트');	
+}
+myFunc();//함수호출(콜)==실행
+$(document).ready(function(){//함수명 없이 실행 == 콜백 함수.
+	   alert('테스트2');
+	   var cnt = 131 //함수외부 뽑아와서 cnt+1해도 131로 안돌아가게 
+	   $(".btn-primary").bind("click",function(event){
 
+		    $("<tr><td>"+cnt+"</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo("table");
+		    cnt = cnt + 1; 
+	   })
+	//   $("<tr><td>131</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo("table");
+	   $("table thead tr").css({"background-color":"skyblue"});
+	 //  $("#searchType").css({"width":"150px"});//제이쿼리 js
+	 //  document.getElementById("searchType").style.width="100px";  //오리지날 js
+	   $(".btn-primary").css({"background-color":"gray"})//실무는 배열{} 더 많이 써.
+	   //$("tr").css("background","red");
+	  // $("tr").css({"background-color":"red","color":"blue"});//이거더 많이 씀.
+	});
+</script>
 </body>
 </html>
