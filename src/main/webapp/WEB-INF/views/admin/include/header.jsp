@@ -20,6 +20,8 @@ if('${msg}' != ""){
 	alert("${msg} 에 성공하였습니다!");
 	} //업데이트 성공시 나옴.200630
 </script>
+<!-- jQuery코어 -->
+<script src="/resources/plugins/jquery/jquery.min.js"></script>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">

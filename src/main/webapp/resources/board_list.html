@@ -166,7 +166,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0">
-                <table class="table table-hover text-nowrap">
+                <table class="table table-hover text-nowrap even_table">
                   <thead>
                     <tr>
                       <th>BNO</th>
@@ -176,7 +176,7 @@
                       <th>VIEWCNT</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody class="even_color">
                     <tr>
                       <td>130</td>
                       <td>홈페이지 오픈 테스트</td>
@@ -206,8 +206,12 @@
                       <td><span class="badge badge-danger right">0</span></td>
                       </tr>
                   </tbody>
+                  </table>
+                   <table class="table table-hover text-nowrap">
+                  <tr>
             <td> <button type="submit" class="btn btn-primary">CREATE</button>
                </td>
+          
            <td>
               <nav aria-label="Contacts Page Navigation">
             <ul class="pagination justify-content-center m-0">
@@ -215,14 +219,13 @@
             </ul>
           </nav>
                </td>
+               </tr>
                 </table>
               </div>
               <!-- /.card-body -->
             </div>
             <!-- /.card -->
           </div>
- 
-    
     </div>
     <!-- ./Content Wrapper. Contains page content -->
 
@@ -231,7 +234,6 @@
 
 	</div>
 	<!-- .content  -->
-
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -272,14 +274,23 @@ function myFunc(){//function함수실행
 myFunc();//함수호출(콜)==실행
 $(document).ready(function(){//함수명 없이 실행 == 콜백 함수.
 	   alert('테스트2');
+	   $(".even_table tbody tr:even").css({"background-color":"black","color":"white"})
+	    //tbody class에 even_color로 되어있어서 tbody대신 even_color로 적어줌
+		//$("tr:even").css({"background-color":"black","color":"white"})
+	   //이페이지에 있는 tr(모든)에 짝수번 even 홀수번 odd
 	   var cnt = 131 //함수외부 뽑아와서 cnt+1해도 131로 안돌아가게 
 	   $(".btn-primary").bind("click",function(event){
-
-		    $("<tr><td>"+cnt+"</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo("table");
-		    cnt = cnt + 1; 
+		   $(".even_table tbody tr").each(function(index,item){   //each는 반복문 tr을 개수만큼 하나씩실행(반복)
+			  $(item).addClass("hong_" + index); //각 라인마다 클래스 hong이 들어가는
+			   //class="hong_0", "hong_1" 댓글마다 고유값이필요한데 hong_처럼 주는 것.
+			   
+		   })
+		   //
+		 // $("<tr><td>"+cnt+"</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo(".even_table tbody");
+		   // cnt = cnt + 1; 
 	   })
 	//   $("<tr><td>131</td><td>한줄추가</td><td>내용추가</td><td>2020.07.15</td><td>100</td></tr>").prependTo("table");
-	   $("table thead tr").css({"background-color":"skyblue"});
+	 //  $("table thead tr").css({"background-color":"skyblue"});
 	 //  $("#searchType").css({"width":"150px"});//제이쿼리 js
 	 //  document.getElementById("searchType").style.width="100px";  //오리지날 js
 	   $(".btn-primary").css({"background-color":"gray"})//실무는 배열{} 더 많이 써.
