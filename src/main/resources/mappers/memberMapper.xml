@@ -63,5 +63,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="viewMember" resultType="org.edu.vo.MemberVO">
 		select * from tbl_member where user_id = #{user_id}  
 	</select>
+	
+	<select id="androidMember" resultType="org.edu.vo.MemberVO">
+		select * from tbl_member order by reg_date desc
+	</select>
 
 </mapper>

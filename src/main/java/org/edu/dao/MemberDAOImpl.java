@@ -1,15 +1,12 @@
 package org.edu.dao;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.inject.Inject;
 
 import org.apache.ibatis.session.SqlSession;
 import org.edu.vo.MemberVO;
 import org.edu.vo.PageVO;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Repository;
 
 @Repository
@@ -49,6 +46,11 @@ public class MemberDAOImpl implements IF_MemberDAO {
 	@Override
 	public int countUserId(PageVO pageVO) throws Exception {
 		return sqlSession.selectOne(mapperQuery + ".countUserId", pageVO);
+	}
+
+	@Override
+	public List<MemberVO> androidMember() throws Exception {
+		return sqlSession.selectList(mapperQuery + ".androidMember");
 	}
 
 }

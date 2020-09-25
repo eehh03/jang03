@@ -43,4 +43,27 @@ public class JsonDataController {
 		return entity;
 	}
 	
+	@RequestMapping(value="/android/list", method = RequestMethod.POST) //안드로이드 외부로그인용
+	public ResponseEntity<List<MemberVO>> androidList() {
+		ResponseEntity<List<MemberVO>> entity = null; //에러나지 않게 null로 그래서 return때 entity넣어줌.
+		try {
+			entity = new ResponseEntity<>(memberDAO.androidMember(), HttpStatus.OK);//생성자 이용해 초기값 설정. 클래스 변수(entity)에 값을 상단?
+		} catch (Exception e) {
+			entity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}	
+		return entity;
+	}
+	
+	@RequestMapping(value = "/android/delete/{user_id}", method = RequestMethod.POST)
+	public ResponseEntity<String> androiddelete(@PathVariable("user_id") String user_id) {
+		ResponseEntity<String> entity = null; 
+		try {
+			memberDAO.deleteMember(user_id);
+			entity = new ResponseEntity<String>("SUCCESS", HttpStatus.OK); 
+		} catch (Exception e) {
+			e.printStackTrace();
+			entity = new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+		return entity;
+	}
 }
